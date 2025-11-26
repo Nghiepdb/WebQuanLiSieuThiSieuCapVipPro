@@ -1,0 +1,27 @@
+[
+  {
+    "MaHoaDon": "HD20251125203338",
+    "NguoiTao": "thungan",
+    "SdtKhachHang": "324500",
+    "NgayLap": "2025-11-25T20:33:38.8087106+07:00",
+    "TongTienHang": 3245000,
+    "GiamGia": 0,
+    "ThanhTien": 3245000,
+    "ChiTiet": [
+      {
+        "MaSP": "SP001",
+        "TenSP": "Sữa tươi Vinamilk 1L",
+        "SoLuong": 12,
+        "DonGia": 35000,
+        "ThanhTien": 420000
+      },
+      {
+        "MaSP": "SP002",
+        "TenSP": "Bánh mì Sandwich",
+        "SoLuong": 113,
+        "DonGia": 25000,
+        "ThanhTien": 2825000
+      }
+    ]
+  }
+]

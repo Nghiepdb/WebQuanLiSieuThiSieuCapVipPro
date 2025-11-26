@@ -1,0 +1,20 @@
+[
+  {
+    "Username": "admin",
+    "Password": "123456",
+    "HoTen": "Quản Trị Viên Hệ Thống",
+    "Role": 0
+  },
+  {
+    "Username": "thungan",
+    "Password": "1",
+    "HoTen": "Nhân Viên Thu Ngân",
+    "Role": 1
+  },
+  {
+    "Username": "thukho",
+    "Password": "1",
+    "HoTen": "Nhân Viên Kho",
+    "Role": 2
+  }
+]

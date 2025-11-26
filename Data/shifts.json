@@ -1,0 +1,42 @@
+[
+  {
+    "MaPhien": "20251125202037",
+    "UsernameNhanVien": "admin",
+    "ThoiGianBatDau": "2025-11-25T20:20:37.6639164+07:00",
+    "ThoiGianKetThuc": null,
+    "TienDauCa": 0,
+    "TienKetCaHeThong": 0,
+    "TienKetCaThucTe": 0,
+    "ChenhLech": 0
+  },
+  {
+    "MaPhien": "20251125202222",
+    "UsernameNhanVien": "admin",
+    "ThoiGianBatDau": "2025-11-25T20:22:22.8713124+07:00",
+    "ThoiGianKetThuc": null,
+    "TienDauCa": 0,
+    "TienKetCaHeThong": 0,
+    "TienKetCaThucTe": 0,
+    "ChenhLech": 0
+  },
+  {
+    "MaPhien": "20251125203227",
+    "UsernameNhanVien": "thungan",
+    "ThoiGianBatDau": "2025-11-25T20:32:27.3720403+07:00",
+    "ThoiGianKetThuc": null,
+    "TienDauCa": 100000,
+    "TienKetCaHeThong": 3345000,
+    "TienKetCaThucTe": 0,
+    "ChenhLech": -3345000
+  },
+  {
+    "MaPhien": "20251125205504",
+    "UsernameNhanVien": "thungan",
+    "ThoiGianBatDau": "2025-11-25T20:55:04.0457183+07:00",
+    "ThoiGianKetThuc": null,
+    "TienDauCa": 0,
+    "TienKetCaHeThong": 0,
+    "TienKetCaThucTe": 0,
+    "ChenhLech": 0
+  }
+]

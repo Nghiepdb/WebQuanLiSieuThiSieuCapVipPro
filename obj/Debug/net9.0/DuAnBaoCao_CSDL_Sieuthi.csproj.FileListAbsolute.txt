@@ -1,0 +1,59 @@
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.GeneratedMSBuildEditorConfig.editorconfig
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.AssemblyInfoInputs.cache
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.AssemblyInfo.cs
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.csproj.CoreCompileInputs.cache
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.exe
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.deps.json
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.runtimeconfig.json
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.dll
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.pdb
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.dll
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\obj\Debug\net9.0\refint\DuAnBaoCao_CSDL_Sieuthi.dll
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.pdb
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.genruntimeconfig.cache
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\obj\Debug\net9.0\ref\DuAnBaoCao_CSDL_Sieuthi.dll
+D:\csharpspace\Prj SuperMarketManageSys\v3\DuAnBaoCao_CSDL_Sieuthi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.sourcelink.json
+E:\HocTapCucCManh\supermarketmanagement-sys\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.exe
+E:\HocTapCucCManh\supermarketmanagement-sys\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.deps.json
+E:\HocTapCucCManh\supermarketmanagement-sys\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.runtimeconfig.json
+E:\HocTapCucCManh\supermarketmanagement-sys\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.dll
+E:\HocTapCucCManh\supermarketmanagement-sys\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.pdb
+E:\HocTapCucCManh\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.GeneratedMSBuildEditorConfig.editorconfig
+E:\HocTapCucCManh\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.AssemblyInfoInputs.cache
+E:\HocTapCucCManh\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.AssemblyInfo.cs
+E:\HocTapCucCManh\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.csproj.CoreCompileInputs.cache
+E:\HocTapCucCManh\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.sourcelink.json
+E:\HocTapCucCManh\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.dll
+E:\HocTapCucCManh\supermarketmanagement-sys\obj\Debug\net9.0\refint\DuAnBaoCao_CSDL_Sieuthi.dll
+E:\HocTapCucCManh\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.pdb
+E:\HocTapCucCManh\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.genruntimeconfig.cache
+E:\HocTapCucCManh\supermarketmanagement-sys\obj\Debug\net9.0\ref\DuAnBaoCao_CSDL_Sieuthi.dll
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.AssemblyInfoInputs.cache
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.AssemblyInfo.cs
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.csproj.CoreCompileInputs.cache
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.sourcelink.json
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.dll
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\obj\Debug\net9.0\refint\DuAnBaoCao_CSDL_Sieuthi.dll
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.pdb
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.exe
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.deps.json
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.runtimeconfig.json
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.dll
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.pdb
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.genruntimeconfig.cache
+C:\Users\LHUser\Downloads\supermarketmanagement-sys\obj\Debug\net9.0\ref\DuAnBaoCao_CSDL_Sieuthi.dll
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.GeneratedMSBuildEditorConfig.editorconfig
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.AssemblyInfoInputs.cache
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.AssemblyInfo.cs
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.csproj.CoreCompileInputs.cache
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.dll
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\obj\Debug\net9.0\refint\DuAnBaoCao_CSDL_Sieuthi.dll
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.pdb
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.exe
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.deps.json
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.runtimeconfig.json
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.dll
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.pdb
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.genruntimeconfig.cache
+E:\HocTapCucCManh\QuanLiCacMatHangTaiSieuThi\obj\Debug\net9.0\ref\DuAnBaoCao_CSDL_Sieuthi.dll
