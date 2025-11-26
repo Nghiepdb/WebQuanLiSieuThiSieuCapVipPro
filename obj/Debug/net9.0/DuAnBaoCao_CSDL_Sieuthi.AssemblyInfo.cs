@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DuAnBaoCao_CSDL_Sieuthi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58fd719b36d46ecf3d6bc2709732ba9f4b7fb1ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3491227bef2f5a1a021f479f9a2d4344637063f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("DuAnBaoCao_CSDL_Sieuthi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DuAnBaoCao_CSDL_Sieuthi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
