@@ -86,5 +86,6 @@ public static class QuanLyKho
                 ConsoleUI.HienThiThongBao($"Đã nhập thêm {slThem}. Tồn mới: {sp.SoLuongTonKho}", ConsoleColor.Green);
             }
         }
+        Database.LuuDuLieu();
     }
 }

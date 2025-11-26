@@ -12,7 +12,7 @@ public static class ConsoleUI
     public const ConsoleColor MauTieuDe = ConsoleColor.Yellow;   // Tiêu đề lớn
     public const ConsoleColor MauChinh = ConsoleColor.White;     // Chữ thường
     public const ConsoleColor MauPhu = ConsoleColor.Gray;        // Chữ phụ / Hint
-    public const ConsoleColor MauHighlight = ConsoleColor.Green; // Đang chọn
+    public const ConsoleColor MauHighlight = ConsoleColor.Black; // Đang chọn
     public const ConsoleColor MauNenHighlight = ConsoleColor.DarkGray;
     public const ConsoleColor MauLoi = ConsoleColor.Red;
     public const ConsoleColor MauThanhCong = ConsoleColor.Green;
@@ -166,16 +166,17 @@ public static class ConsoleUI
                     int oldLeft = Console.CursorLeft;
                     int oldTop = Console.CursorTop;
 
-                    int popupTop = Math.Min(Console.WindowHeight - 8, 18);
+                    int popupTop = Math.Min(Console.WindowHeight , 20);
                     Console.SetCursorPosition(5, popupTop);
                     DatMau(ConsoleColor.White, ConsoleColor.DarkBlue);
+                    string temp = spReview.GiaBan.ToString("N0") + "  VNĐ";
                     Console.WriteLine("╔════════════════════════ XEM NHANH (PREVIEW) ══════════════════════╗");
                     Console.SetCursorPosition(5, popupTop + 1);
                     Console.WriteLine($"║ Tên đầy đủ: {spReview.TenSP.PadRight(54)}║");
                     Console.SetCursorPosition(5, popupTop + 2);
                     Console.WriteLine($"║ Danh mục  : {spReview.DanhMuc.PadRight(54)}║");
                     Console.SetCursorPosition(5, popupTop + 3);
-                    Console.WriteLine($"║ Giá bán   : {spReview.GiaBan.ToString("N0").PadRight(43)} VNĐ        ║");
+                    Console.WriteLine($"║ Giá bán   : {temp.PadRight(54)}║");
                     Console.SetCursorPosition(5, popupTop + 4);
                     Console.WriteLine("╚═══════════════════════════════════════════════════════════════════╝");
                     Console.ResetColor();

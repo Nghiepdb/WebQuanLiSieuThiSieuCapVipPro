@@ -73,5 +73,30 @@
         "ThanhTien": 500000
       }
     ]
+  },
+  {
+    "MaHoaDon": "HD20251126134802",
+    "NguoiTao": "admin",
+    "SdtKhachHang": null,
+    "NgayLap": "2025-11-26T13:48:02.4879971+07:00",
+    "TongTienHang": 52798000,
+    "GiamGia": 0,
+    "ThanhTien": 52798000,
+    "ChiTiet": [
+      {
+        "MaSP": "SP001",
+        "TenSP": "Thước kẻ Nhập khẩu",
+        "SoLuong": 129,
+        "DonGia": 342000,
+        "ThanhTien": 44118000
+      },
+      {
+        "MaSP": "SP002",
+        "TenSP": "Pepsi Khuyến mãi",
+        "SoLuong": 40,
+        "DonGia": 217000,
+        "ThanhTien": 8680000
+      }
+    ]
   }
 ]
