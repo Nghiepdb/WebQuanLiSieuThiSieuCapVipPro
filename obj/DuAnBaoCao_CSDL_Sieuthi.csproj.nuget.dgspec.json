@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "E:\\HocTapCucCManh\\WebQuanLiSieuThiSieuCapVipPro\\DuAnBaoCao_CSDL_Sieuthi.csproj": {}
+    "D:\\temp\\temp\\spmarket_report version\\WebQuanLiSieuThiSieuCapVipPro\\DuAnBaoCao_CSDL_Sieuthi.csproj": {}
   },
   "projects": {
-    "E:\\HocTapCucCManh\\WebQuanLiSieuThiSieuCapVipPro\\DuAnBaoCao_CSDL_Sieuthi.csproj": {
+    "D:\\temp\\temp\\spmarket_report version\\WebQuanLiSieuThiSieuCapVipPro\\DuAnBaoCao_CSDL_Sieuthi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\HocTapCucCManh\\WebQuanLiSieuThiSieuCapVipPro\\DuAnBaoCao_CSDL_Sieuthi.csproj",
+        "projectUniqueName": "D:\\temp\\temp\\spmarket_report version\\WebQuanLiSieuThiSieuCapVipPro\\DuAnBaoCao_CSDL_Sieuthi.csproj",
         "projectName": "DuAnBaoCao_CSDL_Sieuthi",
-        "projectPath": "E:\\HocTapCucCManh\\WebQuanLiSieuThiSieuCapVipPro\\DuAnBaoCao_CSDL_Sieuthi.csproj",
-        "packagesPath": "C:\\Users\\wibun\\.nuget\\packages\\",
-        "outputPath": "E:\\HocTapCucCManh\\WebQuanLiSieuThiSieuCapVipPro\\obj\\",
+        "projectPath": "D:\\temp\\temp\\spmarket_report version\\WebQuanLiSieuThiSieuCapVipPro\\DuAnBaoCao_CSDL_Sieuthi.csproj",
+        "packagesPath": "C:\\Users\\Tri Nguyen\\.nuget\\packages\\",
+        "outputPath": "D:\\temp\\temp\\spmarket_report version\\WebQuanLiSieuThiSieuCapVipPro\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\wibun\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Tri Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

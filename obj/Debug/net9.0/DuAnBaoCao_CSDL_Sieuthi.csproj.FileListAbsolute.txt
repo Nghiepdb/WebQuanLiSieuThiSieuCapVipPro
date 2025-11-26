@@ -72,3 +72,18 @@ E:\HocTapCucCManh\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\refint\DuAnBaoC
 E:\HocTapCucCManh\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.pdb
 E:\HocTapCucCManh\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.genruntimeconfig.cache
 E:\HocTapCucCManh\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\ref\DuAnBaoCao_CSDL_Sieuthi.dll
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.exe
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.deps.json
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.runtimeconfig.json
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.dll
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\bin\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.pdb
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.GeneratedMSBuildEditorConfig.editorconfig
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.AssemblyInfoInputs.cache
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.AssemblyInfo.cs
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.csproj.CoreCompileInputs.cache
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.sourcelink.json
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.dll
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\refint\DuAnBaoCao_CSDL_Sieuthi.dll
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.pdb
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\DuAnBaoCao_CSDL_Sieuthi.genruntimeconfig.cache
+D:\temp\temp\spmarket_report version\WebQuanLiSieuThiSieuCapVipPro\obj\Debug\net9.0\ref\DuAnBaoCao_CSDL_Sieuthi.dll

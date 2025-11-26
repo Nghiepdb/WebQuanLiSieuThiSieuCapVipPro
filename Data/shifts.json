@@ -58,5 +58,25 @@
     "TienKetCaHeThong": 510000,
     "TienKetCaThucTe": 0,
     "ChenhLech": -510000
+  },
+  {
+    "MaPhien": "20251126134026",
+    "UsernameNhanVien": "admin",
+    "ThoiGianBatDau": "2025-11-26T13:40:26.2850651+07:00",
+    "ThoiGianKetThuc": "2025-11-26T13:48:21.5419167+07:00",
+    "TienDauCa": 300000,
+    "TienKetCaHeThong": 53098000,
+    "TienKetCaThucTe": 0,
+    "ChenhLech": -53098000
+  },
+  {
+    "MaPhien": "20251126135032",
+    "UsernameNhanVien": "thungan",
+    "ThoiGianBatDau": "2025-11-26T13:50:32.8392304+07:00",
+    "ThoiGianKetThuc": "2025-11-26T13:51:01.7114152+07:00",
+    "TienDauCa": 1000000000000000,
+    "TienKetCaHeThong": 1000000000000000,
+    "TienKetCaThucTe": 1000000000000000,
+    "ChenhLech": 0
   }
 ]
