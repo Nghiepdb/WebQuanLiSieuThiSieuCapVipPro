@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Text; // Cần cho Export CSV
+using System.Text; 
 using System.IO;
 
 public static class QuanLySanPham
@@ -39,7 +39,6 @@ public static class QuanLySanPham
         return true;
     }
 
-    // Thay vì xóa hẳn, ta chỉ đánh dấu IsDeleted = true
     public static bool XoaSanPham(string maSP)
     {
         if (!dsTheoMa.TryGetValue(maSP, out SanPham sp)) return false;
@@ -47,7 +46,6 @@ public static class QuanLySanPham
         sp.IsDeleted = true; // Soft Delete
         dsTheoMa[maSP] = sp; // Cập nhật lại vào Dictionary
         
-        // Không cần xóa index phụ, vì khi tìm kiếm ta sẽ lọc IsDeleted
         return true;
     }
 
@@ -105,7 +103,6 @@ public static class QuanLySanPham
         dsTheoDanhMuc[danhMuc].Add(sp.MaSP);
     }
 
-    // Tìm kiếm: Chỉ trả về SP chưa bị xóa
     public static bool TimTheoMa(string ma, out SanPham sp) 
     {
         bool found = dsTheoMa.TryGetValue(ma, out sp);
@@ -169,7 +166,6 @@ public static class QuanLySanPham
 
     private static void GiaoDienTimKiemVaXem()
     {
-        // Chỉ lấy SP chưa xóa
         var listSP = dsTheoMa.Values.Where(x => !x.IsDeleted).ToList();
         if (listSP.Count == 0) { ConsoleUI.HienThiThongBao("Kho trống.", ConsoleColor.Red); return; }
 
@@ -185,39 +181,107 @@ public static class QuanLySanPham
         }
     }
 
+    // --- [REFACTOR] SỬA SẢN PHẨM THEO BƯỚC ---
     private static void GiaoDienSua()
     {
         var listSP = dsTheoMa.Values.Where(x => !x.IsDeleted).ToList();
         if (listSP.Count == 0) { ConsoleUI.HienThiThongBao("Kho trống.", ConsoleColor.Red); return; }
 
         SanPham? spChon = ConsoleUI.ChonMotSanPhamVoiBoLocRealTime(listSP, "CHỌN SẢN PHẨM CẦN SỬA");
+        if (!spChon.HasValue) return;
+
+        SanPham spCu = spChon.Value;
         
-        if (spChon.HasValue)
+        string? ten = "", dvt = "";
+        string dm = spCu.DanhMuc;
+        decimal? gia = 0;
+        int? ton = 0;
+
+        // --- BƯỚC 1: SỬA TÊN ---
+        while (true)
         {
-            SanPham spCu = spChon.Value;
             Console.Clear();
-            ConsoleUI.VeTieuDe("SỬA SẢN PHẨM");
+            ConsoleUI.VeTieuDe($"SỬA SẢN PHẨM: {spCu.MaSP} - BƯỚC 1/5");
             HienThiChiTiet(spCu);
             ConsoleUI.KeVienNgang();
             
-            string? ten = ConsoleUI.DocChuoi($"1. Tên ({spCu.TenSP}): ", spCu.TenSP);
-            
-            // Dùng gợi ý cho danh mục
+            ten = ConsoleUI.DocChuoi($"Tên mới ({spCu.TenSP}): ", spCu.TenSP);
+            if (ten == null) return; // ESC
+            break;
+        }
+
+        // --- BƯỚC 2: SỬA DANH MỤC ---
+        while (true)
+        {
+            Console.Clear();
+            ConsoleUI.VeTieuDe($"SỬA SẢN PHẨM: {spCu.MaSP} - BƯỚC 2/5");
+            Console.WriteLine($"Tên SP: {ten}");
+            ConsoleUI.KeVienNgang();
+
             var suggestions = dsTheoDanhMuc.Keys.ToList();
-            string dm = ConsoleUI.DocChuoiCoGoiY($"2. Danh mục ({spCu.DanhMuc}): ", suggestions) ?? spCu.DanhMuc;
-            if (string.IsNullOrEmpty(dm)) dm = spCu.DanhMuc;
-
-            string? dvt = ConsoleUI.DocChuoi($"3. ĐVT ({spCu.DonViTinh}): ", spCu.DonViTinh);
-            decimal? gia = ConsoleUI.DocSoThapPhan($"4. Giá ({spCu.GiaBan:N0}): ", spCu.GiaBan);
-            int? ton = ConsoleUI.DocSoNguyen($"5. Tồn ({spCu.SoLuongTonKho}): ", spCu.SoLuongTonKho);
-
-            if (ten == null || dvt == null || gia == null || ton == null) return;
-
-            var spMoi = new SanPham(spCu.MaSP, ten, dvt, gia.Value, ton.Value, dm);
-            // Giữ lại trạng thái IsDeleted của cái cũ (thường là false)
-            spMoi.IsDeleted = spCu.IsDeleted;
+            string? dmInput = ConsoleUI.DocChuoiCoGoiY($"Danh mục ({spCu.DanhMuc}): ", suggestions);
             
-            if (SuaSanPham(spMoi)) ConsoleUI.HienThiThongBao("Cập nhật thành công!", ConsoleColor.Green);
+            // Logic: ESC -> return null. Enter -> "".
+            // Nếu DocChuoiCoGoiY trả null -> Thoát
+            // Nếu Enter ("") -> Giữ nguyên danh mục cũ
+            
+            // Lưu ý: Nếu ConsoleUI của bạn trả về null khi ESC, thì đoạn này:
+            if (dmInput == null && Console.ReadKey(true).Key == ConsoleKey.Escape) return; 
+            
+            dm = string.IsNullOrEmpty(dmInput) ? spCu.DanhMuc : dmInput;
+            break;
+        }
+
+        // --- BƯỚC 3: SỬA ĐVT ---
+        while (true)
+        {
+            Console.Clear();
+            ConsoleUI.VeTieuDe($"SỬA SẢN PHẨM: {spCu.MaSP} - BƯỚC 3/5");
+            Console.WriteLine($"Tên SP  : {ten}");
+            Console.WriteLine($"Danh mục: {dm}");
+            ConsoleUI.KeVienNgang();
+
+            dvt = ConsoleUI.DocChuoi($"ĐVT ({spCu.DonViTinh}): ", spCu.DonViTinh);
+            if (dvt == null) return;
+            break;
+        }
+
+        // --- BƯỚC 4: SỬA GIÁ ---
+        while (true)
+        {
+            Console.Clear();
+            ConsoleUI.VeTieuDe($"SỬA SẢN PHẨM: {spCu.MaSP} - BƯỚC 4/5");
+            Console.WriteLine($"Tên SP  : {ten}");
+            Console.WriteLine($"ĐVT     : {dvt}");
+            ConsoleUI.KeVienNgang();
+
+            gia = ConsoleUI.DocSoThapPhan($"Giá bán ({spCu.GiaBan:N0}): ", spCu.GiaBan);
+            if (gia == null) return;
+            break;
+        }
+
+        // --- BƯỚC 5: SỬA TỒN ---
+        while (true)
+        {
+            Console.Clear();
+            ConsoleUI.VeTieuDe($"SỬA SẢN PHẨM: {spCu.MaSP} - BƯỚC 5/5");
+            Console.WriteLine($"Tên SP  : {ten}");
+            Console.WriteLine($"Giá bán : {gia:N0}");
+            ConsoleUI.KeVienNgang();
+
+            ton = ConsoleUI.DocSoNguyen($"Tồn kho ({spCu.SoLuongTonKho}): ", spCu.SoLuongTonKho);
+            if (ton == null) return;
+            break;
+        }
+
+        // --- LƯU ---
+        var spMoi = new SanPham(spCu.MaSP, ten, dvt, gia.Value, ton.Value, dm);
+        spMoi.IsDeleted = spCu.IsDeleted;
+        
+        if (SuaSanPham(spMoi)) 
+        {
+            Console.Clear();
+            ConsoleUI.HienThiThongBao("Cập nhật thành công!", ConsoleColor.Green);
         }
     }
 
@@ -248,7 +312,6 @@ public static class QuanLySanPham
 
     private static void GiaoDienThungRac()
     {
-        // Lấy danh sách đã xóa
         var listDaXoa = dsTheoMa.Values.Where(x => x.IsDeleted).ToList();
         
         if (listDaXoa.Count == 0) 
@@ -280,18 +343,20 @@ public static class QuanLySanPham
         Console.ResetColor();
 
         string? ten = ConsoleUI.DocChuoi("1. Tên SP: ", "", true);
-        if (ten == null) return;
+        if (ten == null) return; 
         
-        // --- NÂNG CẤP: GỢI Ý DANH MỤC ---
         var dsGoiY = dsTheoDanhMuc.Keys.ToList();
         string? dm = ConsoleUI.DocChuoiCoGoiY("2. Danh mục (Gõ để hiện gợi ý + Tab): ", dsGoiY);
         if (string.IsNullOrEmpty(dm)) dm = "Chưa phân loại";
 
         string? dvt = ConsoleUI.DocChuoi("3. ĐVT: ", "", true);
-        decimal? gia = ConsoleUI.DocSoThapPhan("4. Giá bán: ");
-        int? ton = ConsoleUI.DocSoNguyen("5. Tồn kho: ");
+        if (dvt == null) return;
 
-        if (dvt == null || gia == null || ton == null) return;
+        decimal? gia = ConsoleUI.DocSoThapPhan("4. Giá bán: ");
+        if (gia == null) return;
+
+        int? ton = ConsoleUI.DocSoNguyen("5. Tồn kho: ");
+        if (ton == null) return;
 
         var sp = new SanPham(maTuDong, ten, dvt, gia.Value, ton.Value, dm);
         ThemSanPham(sp);
@@ -311,11 +376,11 @@ public static class QuanLySanPham
         }
     }
     
-    // --- TÍNH NĂNG MỚI: XUẤT EXCEL ---
     private static void GiaoDienXuatBaoCao()
     {
         try 
         {
+            Console.Clear();
             ConsoleUI.VeTieuDe("XUẤT BÁO CÁO EXCEL");
             string fileName = $"BaoCao_SanPham_{DateTime.Now:yyyyMMdd_HHmmss}.csv";
             
@@ -325,7 +390,6 @@ public static class QuanLySanPham
             foreach (var sp in dsTheoMa.Values)
             {
                 string status = sp.IsDeleted ? "Da Xoa" : "Hien Thi";
-                // Xử lý dấu phẩy trong tên để tránh vỡ CSV
                 string cleanTen = sp.TenSP.Replace(",", " ");
                 string cleanDM = sp.DanhMuc.Replace(",", " ");
                 
@@ -334,7 +398,6 @@ public static class QuanLySanPham
 
             File.WriteAllText(fileName, sb.ToString(), Encoding.UTF8);
             
-            // Lấy đường dẫn tuyệt đối để in ra cho oách
             string fullPath = Path.GetFullPath(fileName);
             Console.WriteLine($"\nĐã xuất {dsTheoMa.Count} dòng dữ liệu.");
             Console.WriteLine($"File lưu tại: {fullPath}");

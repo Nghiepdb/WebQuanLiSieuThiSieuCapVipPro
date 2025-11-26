@@ -34,7 +34,7 @@ public static class QuanLyBanHang
                 "2. Xem lịch sử hóa đơn trong ca", 
                 "3. Kết ca (Bàn giao tiền & Thoát)", 
                 "4. Xử lý Trả hàng (Đổi/Trả & Hoàn tiền)",
-                "5. Đổi mật khẩu cá nhân", // [MỚI]
+                "5. Đổi mật khẩu cá nhân", 
                 "0. Thoát ra" 
             };
 
@@ -45,7 +45,7 @@ public static class QuanLyBanHang
                 case 1: XemLichSuCa(); break;
                 case 2: KetCa(); dangChay = false; break;
                 case 3: XuLyTraHang(); break;
-                case 4: Program.DoiMatKhau(); break; // [MỚI] Gọi hàm từ Program
+                case 4: Program.DoiMatKhau(); break; 
                 case 5: dangChay = false; break;
                 case -1: dangChay = false; break;
             }
@@ -58,7 +58,6 @@ public static class QuanLyBanHang
         Console.Clear();
         ConsoleUI.VeTieuDe("XỬ LÝ TRẢ HÀNG & HOÀN TIỀN");
 
-        // 1. Tìm hóa đơn
         string? maHD = ConsoleUI.DocChuoi(">> Nhập Mã Hóa Đơn gốc: ");
         if (string.IsNullOrEmpty(maHD)) return;
 
@@ -69,7 +68,6 @@ public static class QuanLyBanHang
             return;
         }
 
-        // Hiển thị chi tiết để chọn
         Console.WriteLine($"Hóa đơn: {hd.MaHoaDon} | Ngày: {hd.NgayLap:dd/MM/yyyy}");
         Console.WriteLine("Danh sách sản phẩm đã mua:");
         for (int i = 0; i < hd.ChiTiet.Count; i++)
@@ -79,23 +77,24 @@ public static class QuanLyBanHang
         }
         ConsoleUI.KeVienNgang();
 
-        // 2. Chọn sản phẩm trả
         int? stt = ConsoleUI.DocSoNguyen(">> Chọn STT sản phẩm muốn trả: ");
         if (stt == null || stt < 1 || stt > hd.ChiTiet.Count) return;
 
         var spTra = hd.ChiTiet[stt.Value - 1];
         
-        // 3. Nhập số lượng và Lý do
         int? slTra = ConsoleUI.DocSoNguyen($">> Nhập số lượng trả (Tối đa {spTra.SoLuong}): ");
-        if (slTra == null || slTra <= 0 || slTra > spTra.SoLuong)
+        // Fix ESC: Nếu nhấn ESC thì return luôn
+        if (slTra == null) return; 
+
+        if (slTra <= 0 || slTra > spTra.SoLuong)
         {
             ConsoleUI.HienThiThongBao("Số lượng không hợp lệ!", ConsoleColor.Red);
             return;
         }
 
         string? lyDo = ConsoleUI.DocChuoi(">> Lý do trả hàng (VD: Lỗi NSX, Hư hỏng): ", "", true);
+        if (lyDo == null) return; // ESC
 
-        // 4. Xác nhận
         decimal tienHoan = slTra.Value * spTra.DonGia;
         
         Console.WriteLine();
@@ -106,7 +105,6 @@ public static class QuanLyBanHang
 
         if (ConsoleUI.XacNhan("Đồng ý lập phiếu trả hàng?"))
         {
-            // Tạo phiếu trả
             var phieu = new PhieuTraHang
             {
                 MaPhieu = "TH" + DateTime.Now.ToString("yyyyMMddHHmmss"),
@@ -122,7 +120,6 @@ public static class QuanLyBanHang
 
             Database.PhieuTraHangs.Add(phieu);
             
-            // Trừ tiền trong ca hiện tại (Vì phải lấy tiền két trả khách)
             if (CaHienTai != null) CaHienTai.TienKetCaHeThong -= tienHoan;
 
             Database.LuuDuLieu();
@@ -135,6 +132,7 @@ public static class QuanLyBanHang
         Console.Clear();
         ConsoleUI.VeTieuDe("MỞ CA LÀM VIỆC");
         decimal? tienDauCa = ConsoleUI.DocSoThapPhan("Nhập số tiền đầu ca (VNĐ): ");
+        if (tienDauCa == null) return; // ESC
         
         CaHienTai = new PhienLamViec
         {
@@ -145,7 +143,6 @@ public static class QuanLyBanHang
             TienKetCaHeThong = tienDauCa ?? 0
         };
         
-        // Lưu lịch sử ca
         Database.LichSuCa.Add(CaHienTai);
         Database.LuuDuLieu();
         ConsoleUI.HienThiThongBao("Đã mở ca thành công! Sẵn sàng bán hàng.", ConsoleUI.MauThanhCong);
@@ -159,7 +156,6 @@ public static class QuanLyBanHang
         // --- BƯỚC 1: QUÉT SẢN PHẨM ---
         while (true)
         {
-            // Chỉ lấy sản phẩm chưa bị xóa
             var listSP = QuanLySanPham.dsTheoMa.Values.Where(x => !x.IsDeleted).ToList();
             
             if (listSP.Count == 0)
@@ -218,7 +214,13 @@ public static class QuanLyBanHang
             }
 
             int? sl = ConsoleUI.DocSoNguyen(">> Nhập số lượng khách mua (Mặc định 1): ", 1);
-            if (!sl.HasValue) sl = 1;
+            
+            // Fix lỗi quan trọng: Nếu ESC (sl == null) thì KHÔNG ĐƯỢC tính là 1
+            if (sl == null) 
+            {
+                ConsoleUI.HienThiThongBao("Đã hủy thêm món.", ConsoleColor.DarkGray);
+                continue; 
+            }
 
             if (sl.Value > 0)
             {
@@ -261,7 +263,7 @@ public static class QuanLyBanHang
 
     private static void XuLyKhachHang()
     {
-        Console.Clear();
+        Console.Clear(); // Fix UI
         ConsoleUI.VeTieuDe("BƯỚC 2: THÔNG TIN KHÁCH HÀNG");
         HienThiGioHang();
         Console.WriteLine();
@@ -269,7 +271,7 @@ public static class QuanLyBanHang
         while (true)
         {
             string? sdt = ConsoleUI.DocChuoi(">> Nhập SĐT Khách hàng (Enter để bỏ qua): ");
-            
+            // Ở đây nếu ESC hoặc Enter trống đều coi là khách vãng lai
             if (string.IsNullOrEmpty(sdt))
             {
                 KhachHienTai = null;
@@ -300,6 +302,11 @@ public static class QuanLyBanHang
                         Database.LuuDuLieu(); 
                         ConsoleUI.HienThiThongBao($"Đã tạo hồ sơ cho {ten}.", ConsoleUI.MauThanhCong);
                         break;
+                    }
+                    else 
+                    {
+                        // Nhấn ESC khi nhập tên -> Coi như hủy tạo mới, quay lại nhập SĐT
+                        ConsoleUI.HienThiThongBao("Đã hủy tạo khách hàng.", ConsoleColor.Red);
                     }
                 }
                 else
@@ -356,6 +363,9 @@ public static class QuanLyBanHang
         while (true)
         {
             decimal? nhap = ConsoleUI.DocSoThapPhan("\nKhách đưa (0: Trả Thẻ): ");
+            // Nếu ESC lúc thanh toán, mặc định quay lại nhập tiếp (không hủy đơn vì đã chốt)
+            // Hoặc có thể hiểu là khách chưa đưa tiền.
+            
             if (nhap != null)
             {
                 khachDua = nhap.Value;
