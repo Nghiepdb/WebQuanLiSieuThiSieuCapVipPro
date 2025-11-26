@@ -4,5 +4,11 @@
     "TenKhach": "Sao Biển",
     "TongChiTieu": 3245000,
     "Hang": 0
+  },
+  {
+    "SoDienThoai": "01234567",
+    "TenKhach": "Bien",
+    "TongChiTieu": 545000,
+    "Hang": 0
   }
 ]

@@ -181,6 +181,109 @@ public static class QuanLySanPham
         }
     }
 
+    // --- [REFACTOR] THÊM SẢN PHẨM THEO BƯỚC ---
+    private static void GiaoDienThem()
+    {
+        string maTuDong = TaoMaSPTuDong();
+        string? ten = "";
+        string dm = "Chưa phân loại";
+        string? dvt = "";
+        decimal? gia = 0;
+        int? ton = 0;
+
+        // --- BƯỚC 1: TÊN SẢN PHẨM ---
+        while (true)
+        {
+            Console.Clear();
+            ConsoleUI.VeTieuDe($"THÊM SẢN PHẨM MỚI ({maTuDong}) - BƯỚC 1/5");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine($"[*] Mã sản phẩm: {maTuDong}");
+            Console.ResetColor();
+            ConsoleUI.KeVienNgang();
+
+            ten = ConsoleUI.DocChuoi("1. Tên SP: ", "", true);
+            if (ten == null) return; // ESC
+            
+            if (string.IsNullOrWhiteSpace(ten))
+            {
+                ConsoleUI.HienThiThongBao("Tên không được để trống!", ConsoleColor.Red);
+                continue;
+            }
+            break;
+        }
+
+        // --- BƯỚC 2: DANH MỤC (GỢI Ý) ---
+        while (true)
+        {
+            Console.Clear();
+            ConsoleUI.VeTieuDe($"THÊM SẢN PHẨM MỚI ({maTuDong}) - BƯỚC 2/5");
+            Console.WriteLine($"Tên SP: {ten}");
+            ConsoleUI.KeVienNgang();
+
+            var dsGoiY = dsTheoDanhMuc.Keys.ToList();
+            string? dmInput = ConsoleUI.DocChuoiCoGoiY("2. Danh mục (Gõ để hiện gợi ý + Tab): ", dsGoiY);
+            
+            if (dmInput == null) return; // ESC
+
+            dm = string.IsNullOrEmpty(dmInput) ? "Chưa phân loại" : dmInput;
+            break;
+        }
+
+        // --- BƯỚC 3: ĐƠN VỊ TÍNH ---
+        while (true)
+        {
+            Console.Clear();
+            ConsoleUI.VeTieuDe($"THÊM SẢN PHẨM MỚI ({maTuDong}) - BƯỚC 3/5");
+            Console.WriteLine($"Tên SP  : {ten}");
+            Console.WriteLine($"Danh mục: {dm}");
+            ConsoleUI.KeVienNgang();
+
+            dvt = ConsoleUI.DocChuoi("3. ĐVT (VD: Cái, Hộp...): ", "", true);
+            if (dvt == null) return; // ESC
+
+            if (string.IsNullOrWhiteSpace(dvt))
+            {
+                ConsoleUI.HienThiThongBao("ĐVT không được để trống!", ConsoleColor.Red);
+                continue;
+            }
+            break;
+        }
+
+        // --- BƯỚC 4: GIÁ BÁN ---
+        while (true)
+        {
+            Console.Clear();
+            ConsoleUI.VeTieuDe($"THÊM SẢN PHẨM MỚI ({maTuDong}) - BƯỚC 4/5");
+            Console.WriteLine($"Tên SP  : {ten}");
+            Console.WriteLine($"ĐVT     : {dvt}");
+            ConsoleUI.KeVienNgang();
+
+            gia = ConsoleUI.DocSoThapPhan("4. Giá bán (VNĐ): ");
+            if (gia == null) return; // ESC
+            break;
+        }
+
+        // --- BƯỚC 5: TỒN KHO ---
+        while (true)
+        {
+            Console.Clear();
+            ConsoleUI.VeTieuDe($"THÊM SẢN PHẨM MỚI ({maTuDong}) - BƯỚC 5/5");
+            Console.WriteLine($"Tên SP  : {ten}");
+            Console.WriteLine($"Giá bán : {gia:N0}");
+            ConsoleUI.KeVienNgang();
+
+            ton = ConsoleUI.DocSoNguyen("5. Tồn kho ban đầu: ");
+            if (ton == null) return; // ESC
+            break;
+        }
+
+        // --- LƯU ---
+        var sp = new SanPham(maTuDong, ten, dvt, gia.Value, ton.Value, dm);
+        ThemSanPham(sp);
+        Console.Clear();
+        ConsoleUI.HienThiThongBao($"Thêm thành công {maTuDong}!", ConsoleColor.Green);
+    }
+
     // --- [REFACTOR] SỬA SẢN PHẨM THEO BƯỚC ---
     private static void GiaoDienSua()
     {
@@ -221,12 +324,7 @@ public static class QuanLySanPham
             var suggestions = dsTheoDanhMuc.Keys.ToList();
             string? dmInput = ConsoleUI.DocChuoiCoGoiY($"Danh mục ({spCu.DanhMuc}): ", suggestions);
             
-            // Logic: ESC -> return null. Enter -> "".
-            // Nếu DocChuoiCoGoiY trả null -> Thoát
-            // Nếu Enter ("") -> Giữ nguyên danh mục cũ
-            
-            // Lưu ý: Nếu ConsoleUI của bạn trả về null khi ESC, thì đoạn này:
-            if (dmInput == null && Console.ReadKey(true).Key == ConsoleKey.Escape) return; 
+            if (dmInput == null) return; // ESC
             
             dm = string.IsNullOrEmpty(dmInput) ? spCu.DanhMuc : dmInput;
             break;
@@ -330,37 +428,6 @@ public static class QuanLySanPham
                 ConsoleUI.HienThiThongBao("Đã khôi phục thành công!", ConsoleColor.Green);
             }
         }
-    }
-
-    private static void GiaoDienThem()
-    {
-        Console.Clear();
-        ConsoleUI.VeTieuDe("THÊM SẢN PHẨM MỚI");
-        
-        string maTuDong = TaoMaSPTuDong();
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.WriteLine($"[*] Mã sản phẩm (Tự động): {maTuDong}");
-        Console.ResetColor();
-
-        string? ten = ConsoleUI.DocChuoi("1. Tên SP: ", "", true);
-        if (ten == null) return; 
-        
-        var dsGoiY = dsTheoDanhMuc.Keys.ToList();
-        string? dm = ConsoleUI.DocChuoiCoGoiY("2. Danh mục (Gõ để hiện gợi ý + Tab): ", dsGoiY);
-        if (string.IsNullOrEmpty(dm)) dm = "Chưa phân loại";
-
-        string? dvt = ConsoleUI.DocChuoi("3. ĐVT: ", "", true);
-        if (dvt == null) return;
-
-        decimal? gia = ConsoleUI.DocSoThapPhan("4. Giá bán: ");
-        if (gia == null) return;
-
-        int? ton = ConsoleUI.DocSoNguyen("5. Tồn kho: ");
-        if (ton == null) return;
-
-        var sp = new SanPham(maTuDong, ten, dvt, gia.Value, ton.Value, dm);
-        ThemSanPham(sp);
-        ConsoleUI.HienThiThongBao($"Thêm thành công {maTuDong}!", ConsoleColor.Green);
     }
 
     private static void GiaoDienXemDanhMuc()

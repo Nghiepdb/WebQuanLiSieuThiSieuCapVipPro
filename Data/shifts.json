@@ -38,5 +38,15 @@
     "TienKetCaHeThong": 0,
     "TienKetCaThucTe": 0,
     "ChenhLech": 0
+  },
+  {
+    "MaPhien": "20251126095930",
+    "UsernameNhanVien": "thungan",
+    "ThoiGianBatDau": "2025-11-26T09:59:30.5629615+07:00",
+    "ThoiGianKetThuc": "2025-11-26T10:01:27.9420061+07:00",
+    "TienDauCa": 100000,
+    "TienKetCaHeThong": 520000,
+    "TienKetCaThucTe": 520000,
+    "ChenhLech": 0
   }
 ]
