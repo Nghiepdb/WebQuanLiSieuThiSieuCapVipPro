@@ -1,901 +1,901 @@
 [
   {
     "MaSP": "SP001",
-    "TenSP": "Sữa tươi Vinamilk 1L",
-    "DonViTinh": "Hộp",
-    "GiaBan": 35000,
-    "SoLuongTonKho": 126,
-    "DanhMuc": "Đồ uống",
+    "TenSP": "Thước kẻ Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 342000,
+    "SoLuongTonKho": 129,
+    "DanhMuc": "Văn phòng phẩm",
     "IsDeleted": false
   },
   {
     "MaSP": "SP002",
-    "TenSP": "Bánh mì Sandwich",
-    "DonViTinh": "Gói",
-    "GiaBan": 25000,
-    "SoLuongTonKho": 182,
-    "DanhMuc": "Thực phẩm",
+    "TenSP": "Pepsi Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 217000,
+    "SoLuongTonKho": 44,
+    "DanhMuc": "Đồ uống",
     "IsDeleted": false
   },
   {
     "MaSP": "SP003",
-    "TenSP": "Nước suối Aquafina 500ml",
-    "DonViTinh": "Chai",
-    "GiaBan": 5000,
-    "SoLuongTonKho": 1000,
-    "DanhMuc": "Đồ uống",
+    "TenSP": "Bút chì màu Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 168000,
+    "SoLuongTonKho": 85,
+    "DanhMuc": "Văn phòng phẩm",
     "IsDeleted": false
   },
   {
     "MaSP": "SP004",
-    "TenSP": "Thịt ba rọi bò Mỹ",
-    "DonViTinh": "Kg",
-    "GiaBan": 250000,
-    "SoLuongTonKho": 50,
-    "DanhMuc": "Thực phẩm tươi sống",
+    "TenSP": "Bánh Gạo Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 300000,
+    "SoLuongTonKho": 166,
+    "DanhMuc": "Bánh kẹo",
     "IsDeleted": false
   },
   {
     "MaSP": "SP005",
-    "TenSP": "Táo Envy New Zealand",
-    "DonViTinh": "Kg",
-    "GiaBan": 120000,
-    "SoLuongTonKho": 80,
-    "DanhMuc": "Rau củ quả",
+    "TenSP": "Bút bi Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 71000,
+    "SoLuongTonKho": 149,
+    "DanhMuc": "Văn phòng phẩm",
     "IsDeleted": false
   },
   {
     "MaSP": "SP006",
-    "TenSP": "Coca-Cola Zero",
-    "DonViTinh": "Lon",
-    "GiaBan": 10000,
-    "SoLuongTonKho": 500,
-    "DanhMuc": "Đồ uống",
+    "TenSP": "Bánh Gạo Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 190000,
+    "SoLuongTonKho": 128,
+    "DanhMuc": "Bánh kẹo",
     "IsDeleted": false
   },
   {
     "MaSP": "SP007",
-    "TenSP": "Dầu ăn Tường An 1L",
-    "DonViTinh": "Chai",
-    "GiaBan": 45000,
-    "SoLuongTonKho": 200,
-    "DanhMuc": "Gia vị",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP008",
-    "TenSP": "Gạo ST25",
-    "DonViTinh": "Túi 5Kg",
-    "GiaBan": 180000,
-    "SoLuongTonKho": 120,
-    "DanhMuc": "Thực phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP009",
-    "TenSP": "Trứng gà ta",
-    "DonViTinh": "Vỉ 10",
-    "GiaBan": 40000,
-    "SoLuongTonKho": 250,
-    "DanhMuc": "Thực phẩm tươi sống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP010",
-    "TenSP": "Cà phê G7 Trung Nguyên",
-    "DonViTinh": "Hộp",
-    "GiaBan": 55000,
-    "SoLuongTonKho": 300,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP011",
-    "TenSP": "Đũa gỗ (Lô 11)",
+    "TenSP": "Snack Oishi Loại 1",
     "DonViTinh": "Cái",
-    "GiaBan": 178000,
-    "SoLuongTonKho": 101,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP012",
-    "TenSP": "Giấy A4 Double A (Lô 12)",
-    "DonViTinh": "Cái",
-    "GiaBan": 202000,
-    "SoLuongTonKho": 110,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP013",
-    "TenSP": "Chocolate KitKat (Lô 13)",
-    "DonViTinh": "Cái",
-    "GiaBan": 352000,
-    "SoLuongTonKho": 32,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP014",
-    "TenSP": "Trà xanh 0 độ (Lô 14)",
-    "DonViTinh": "Cái",
-    "GiaBan": 308000,
-    "SoLuongTonKho": 130,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP015",
-    "TenSP": "Nồi cơm điện (Lô 15)",
-    "DonViTinh": "Cái",
-    "GiaBan": 67000,
-    "SoLuongTonKho": 163,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP016",
-    "TenSP": "Nồi cơm điện (Lô 16)",
-    "DonViTinh": "Cái",
-    "GiaBan": 469000,
-    "SoLuongTonKho": 192,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP017",
-    "TenSP": "Chocolate KitKat (Lô 17)",
-    "DonViTinh": "Cái",
-    "GiaBan": 211000,
-    "SoLuongTonKho": 20,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP018",
-    "TenSP": "Đũa gỗ (Lô 18)",
-    "DonViTinh": "Cái",
-    "GiaBan": 399000,
-    "SoLuongTonKho": 174,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP019",
-    "TenSP": "Snack Oishi (Lô 19)",
-    "DonViTinh": "Cái",
-    "GiaBan": 214000,
-    "SoLuongTonKho": 127,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP020",
-    "TenSP": "Chảo chống dính (Lô 20)",
-    "DonViTinh": "Cái",
-    "GiaBan": 85000,
-    "SoLuongTonKho": 195,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP021",
-    "TenSP": "Nước tăng lực Redbull (Lô 21)",
-    "DonViTinh": "Cái",
-    "GiaBan": 203000,
-    "SoLuongTonKho": 65,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP022",
-    "TenSP": "Nước tăng lực Redbull (Lô 22)",
-    "DonViTinh": "Cái",
-    "GiaBan": 455000,
-    "SoLuongTonKho": 170,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP023",
-    "TenSP": "Chocolate KitKat (Lô 23)",
-    "DonViTinh": "Cái",
-    "GiaBan": 17000,
-    "SoLuongTonKho": 118,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP024",
-    "TenSP": "Bút bi Thiên Long (Lô 24)",
-    "DonViTinh": "Cái",
-    "GiaBan": 370000,
-    "SoLuongTonKho": 197,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP025",
-    "TenSP": "Nước tăng lực Redbull (Lô 25)",
-    "DonViTinh": "Cái",
-    "GiaBan": 23000,
-    "SoLuongTonKho": 105,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP026",
-    "TenSP": "Bánh quy Cosy (Lô 26)",
-    "DonViTinh": "Cái",
-    "GiaBan": 299000,
-    "SoLuongTonKho": 138,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP027",
-    "TenSP": "Bánh quy Cosy (Lô 27)",
-    "DonViTinh": "Cái",
-    "GiaBan": 19000,
-    "SoLuongTonKho": 17,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP028",
-    "TenSP": "Chocolate KitKat (Lô 28)",
-    "DonViTinh": "Cái",
-    "GiaBan": 252000,
-    "SoLuongTonKho": 118,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP029",
-    "TenSP": "Nước tăng lực Redbull (Lô 29)",
-    "DonViTinh": "Cái",
-    "GiaBan": 283000,
-    "SoLuongTonKho": 178,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP030",
-    "TenSP": "Chocolate KitKat (Lô 30)",
-    "DonViTinh": "Cái",
-    "GiaBan": 147000,
-    "SoLuongTonKho": 124,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP031",
-    "TenSP": "Bát sứ (Lô 31)",
-    "DonViTinh": "Cái",
-    "GiaBan": 280000,
-    "SoLuongTonKho": 101,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP032",
-    "TenSP": "Vở học sinh (Lô 32)",
-    "DonViTinh": "Cái",
-    "GiaBan": 117000,
-    "SoLuongTonKho": 180,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP033",
-    "TenSP": "Bút bi Thiên Long (Lô 33)",
-    "DonViTinh": "Cái",
-    "GiaBan": 252000,
-    "SoLuongTonKho": 176,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP034",
-    "TenSP": "Nước tăng lực Redbull (Lô 34)",
-    "DonViTinh": "Cái",
-    "GiaBan": 441000,
-    "SoLuongTonKho": 42,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP035",
-    "TenSP": "Đũa gỗ (Lô 35)",
-    "DonViTinh": "Cái",
-    "GiaBan": 44000,
-    "SoLuongTonKho": 140,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP036",
-    "TenSP": "Kẹo dẻo ChipChip (Lô 36)",
-    "DonViTinh": "Cái",
-    "GiaBan": 145000,
-    "SoLuongTonKho": 186,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP037",
-    "TenSP": "Giấy A4 Double A (Lô 37)",
-    "DonViTinh": "Cái",
-    "GiaBan": 75000,
-    "SoLuongTonKho": 110,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP038",
-    "TenSP": "Chảo chống dính (Lô 38)",
-    "DonViTinh": "Cái",
-    "GiaBan": 327000,
-    "SoLuongTonKho": 177,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP039",
-    "TenSP": "Kẹo dẻo ChipChip (Lô 39)",
-    "DonViTinh": "Cái",
-    "GiaBan": 32000,
-    "SoLuongTonKho": 84,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP040",
-    "TenSP": "Vở học sinh (Lô 40)",
-    "DonViTinh": "Cái",
-    "GiaBan": 27000,
-    "SoLuongTonKho": 183,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP041",
-    "TenSP": "Bút bi Thiên Long (Lô 41)",
-    "DonViTinh": "Cái",
-    "GiaBan": 459000,
-    "SoLuongTonKho": 99,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP042",
-    "TenSP": "Sữa đậu nành Fami (Lô 42)",
-    "DonViTinh": "Cái",
-    "GiaBan": 317000,
-    "SoLuongTonKho": 24,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP043",
-    "TenSP": "Trà xanh 0 độ (Lô 43)",
-    "DonViTinh": "Cái",
-    "GiaBan": 84000,
-    "SoLuongTonKho": 54,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP044",
-    "TenSP": "Chảo chống dính (Lô 44)",
-    "DonViTinh": "Cái",
-    "GiaBan": 32000,
-    "SoLuongTonKho": 148,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP045",
-    "TenSP": "Giấy A4 Double A (Lô 45)",
-    "DonViTinh": "Cái",
-    "GiaBan": 108000,
-    "SoLuongTonKho": 190,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP046",
-    "TenSP": "Vở học sinh (Lô 46)",
-    "DonViTinh": "Cái",
-    "GiaBan": 53000,
-    "SoLuongTonKho": 141,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP047",
-    "TenSP": "Giấy A4 Double A (Lô 47)",
-    "DonViTinh": "Cái",
-    "GiaBan": 485000,
-    "SoLuongTonKho": 64,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP048",
-    "TenSP": "Chảo chống dính (Lô 48)",
-    "DonViTinh": "Cái",
-    "GiaBan": 24000,
-    "SoLuongTonKho": 115,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP049",
-    "TenSP": "Snack Oishi (Lô 49)",
-    "DonViTinh": "Cái",
-    "GiaBan": 37000,
-    "SoLuongTonKho": 45,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP050",
-    "TenSP": "Giấy A4 Double A (Lô 50)",
-    "DonViTinh": "Cái",
-    "GiaBan": 292000,
-    "SoLuongTonKho": 106,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP051",
-    "TenSP": "Giấy A4 Double A (Lô 51)",
-    "DonViTinh": "Cái",
-    "GiaBan": 353000,
-    "SoLuongTonKho": 148,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP052",
-    "TenSP": "Nồi cơm điện (Lô 52)",
-    "DonViTinh": "Cái",
-    "GiaBan": 69000,
-    "SoLuongTonKho": 122,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP053",
-    "TenSP": "Bánh quy Cosy (Lô 53)",
-    "DonViTinh": "Cái",
-    "GiaBan": 498000,
-    "SoLuongTonKho": 73,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP054",
-    "TenSP": "Bánh quy Cosy (Lô 54)",
-    "DonViTinh": "Cái",
-    "GiaBan": 97000,
-    "SoLuongTonKho": 10,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP055",
-    "TenSP": "Sữa đậu nành Fami (Lô 55)",
-    "DonViTinh": "Cái",
-    "GiaBan": 330000,
-    "SoLuongTonKho": 149,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP056",
-    "TenSP": "Snack Oishi (Lô 56)",
-    "DonViTinh": "Cái",
-    "GiaBan": 271000,
-    "SoLuongTonKho": 139,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP057",
-    "TenSP": "Bát sứ (Lô 57)",
-    "DonViTinh": "Cái",
-    "GiaBan": 31000,
-    "SoLuongTonKho": 52,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP058",
-    "TenSP": "Sữa đậu nành Fami (Lô 58)",
-    "DonViTinh": "Cái",
-    "GiaBan": 432000,
-    "SoLuongTonKho": 147,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP059",
-    "TenSP": "Chảo chống dính (Lô 59)",
-    "DonViTinh": "Cái",
-    "GiaBan": 458000,
-    "SoLuongTonKho": 197,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP060",
-    "TenSP": "Vở học sinh (Lô 60)",
-    "DonViTinh": "Cái",
-    "GiaBan": 253000,
-    "SoLuongTonKho": 88,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP061",
-    "TenSP": "Bát sứ (Lô 61)",
-    "DonViTinh": "Cái",
-    "GiaBan": 331000,
-    "SoLuongTonKho": 27,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP062",
-    "TenSP": "Trà xanh 0 độ (Lô 62)",
-    "DonViTinh": "Cái",
-    "GiaBan": 168000,
-    "SoLuongTonKho": 111,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP063",
-    "TenSP": "Trà xanh 0 độ (Lô 63)",
-    "DonViTinh": "Cái",
-    "GiaBan": 115000,
-    "SoLuongTonKho": 165,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP064",
-    "TenSP": "Chảo chống dính (Lô 64)",
-    "DonViTinh": "Cái",
-    "GiaBan": 65000,
-    "SoLuongTonKho": 154,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP065",
-    "TenSP": "Đũa gỗ (Lô 65)",
-    "DonViTinh": "Cái",
-    "GiaBan": 89000,
-    "SoLuongTonKho": 16,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP066",
-    "TenSP": "Đũa gỗ (Lô 66)",
-    "DonViTinh": "Cái",
-    "GiaBan": 92000,
-    "SoLuongTonKho": 25,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP067",
-    "TenSP": "Trà xanh 0 độ (Lô 67)",
-    "DonViTinh": "Cái",
-    "GiaBan": 338000,
-    "SoLuongTonKho": 146,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP068",
-    "TenSP": "Chảo chống dính (Lô 68)",
-    "DonViTinh": "Cái",
-    "GiaBan": 189000,
-    "SoLuongTonKho": 58,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP069",
-    "TenSP": "Giấy A4 Double A (Lô 69)",
-    "DonViTinh": "Cái",
-    "GiaBan": 479000,
-    "SoLuongTonKho": 167,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP070",
-    "TenSP": "Bút bi Thiên Long (Lô 70)",
-    "DonViTinh": "Cái",
-    "GiaBan": 148000,
-    "SoLuongTonKho": 119,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP071",
-    "TenSP": "Snack Oishi (Lô 71)",
-    "DonViTinh": "Cái",
-    "GiaBan": 95000,
-    "SoLuongTonKho": 134,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP072",
-    "TenSP": "Sữa đậu nành Fami (Lô 72)",
-    "DonViTinh": "Cái",
-    "GiaBan": 324000,
-    "SoLuongTonKho": 16,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP073",
-    "TenSP": "Chocolate KitKat (Lô 73)",
-    "DonViTinh": "Cái",
-    "GiaBan": 360000,
-    "SoLuongTonKho": 161,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP074",
-    "TenSP": "Kẹo dẻo ChipChip (Lô 74)",
-    "DonViTinh": "Cái",
-    "GiaBan": 204000,
-    "SoLuongTonKho": 139,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP075",
-    "TenSP": "Vở học sinh (Lô 75)",
-    "DonViTinh": "Cái",
-    "GiaBan": 183000,
-    "SoLuongTonKho": 181,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP076",
-    "TenSP": "Vở học sinh (Lô 76)",
-    "DonViTinh": "Cái",
-    "GiaBan": 488000,
-    "SoLuongTonKho": 12,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP077",
-    "TenSP": "Nồi cơm điện (Lô 77)",
-    "DonViTinh": "Cái",
-    "GiaBan": 49000,
-    "SoLuongTonKho": 50,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP078",
-    "TenSP": "Bút bi Thiên Long (Lô 78)",
-    "DonViTinh": "Cái",
-    "GiaBan": 416000,
-    "SoLuongTonKho": 165,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP079",
-    "TenSP": "Nước tăng lực Redbull (Lô 79)",
-    "DonViTinh": "Cái",
-    "GiaBan": 221000,
-    "SoLuongTonKho": 118,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP080",
-    "TenSP": "Snack Oishi (Lô 80)",
-    "DonViTinh": "Cái",
-    "GiaBan": 87000,
-    "SoLuongTonKho": 175,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP081",
-    "TenSP": "Nồi cơm điện (Lô 81)",
-    "DonViTinh": "Cái",
-    "GiaBan": 69000,
-    "SoLuongTonKho": 120,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP082",
-    "TenSP": "Giấy A4 Double A (Lô 82)",
-    "DonViTinh": "Cái",
-    "GiaBan": 165000,
-    "SoLuongTonKho": 88,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP083",
-    "TenSP": "Nồi cơm điện (Lô 83)",
-    "DonViTinh": "Cái",
-    "GiaBan": 73000,
-    "SoLuongTonKho": 188,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP084",
-    "TenSP": "Trà xanh 0 độ (Lô 84)",
-    "DonViTinh": "Cái",
-    "GiaBan": 219000,
-    "SoLuongTonKho": 176,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP085",
-    "TenSP": "Trà xanh 0 độ (Lô 85)",
-    "DonViTinh": "Cái",
-    "GiaBan": 368000,
-    "SoLuongTonKho": 102,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP086",
-    "TenSP": "Vở học sinh (Lô 86)",
-    "DonViTinh": "Cái",
-    "GiaBan": 422000,
-    "SoLuongTonKho": 198,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP087",
-    "TenSP": "Bút bi Thiên Long (Lô 87)",
-    "DonViTinh": "Cái",
-    "GiaBan": 21000,
-    "SoLuongTonKho": 100,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP088",
-    "TenSP": "Chảo chống dính (Lô 88)",
-    "DonViTinh": "Cái",
-    "GiaBan": 470000,
-    "SoLuongTonKho": 30,
-    "DanhMuc": "Đồ gia dụng",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP089",
-    "TenSP": "Chocolate KitKat (Lô 89)",
-    "DonViTinh": "Cái",
-    "GiaBan": 139000,
-    "SoLuongTonKho": 114,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP090",
-    "TenSP": "Giấy A4 Double A (Lô 90)",
-    "DonViTinh": "Cái",
-    "GiaBan": 212000,
-    "SoLuongTonKho": 91,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP091",
-    "TenSP": "Chocolate KitKat (Lô 91)",
-    "DonViTinh": "Cái",
-    "GiaBan": 197000,
-    "SoLuongTonKho": 105,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP092",
-    "TenSP": "Trà xanh 0 độ (Lô 92)",
-    "DonViTinh": "Cái",
-    "GiaBan": 50000,
-    "SoLuongTonKho": 128,
-    "DanhMuc": "Đồ uống",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP093",
-    "TenSP": "Giấy A4 Double A (Lô 93)",
-    "DonViTinh": "Cái",
-    "GiaBan": 494000,
-    "SoLuongTonKho": 73,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP094",
-    "TenSP": "Bút bi Thiên Long (Lô 94)",
-    "DonViTinh": "Cái",
-    "GiaBan": 109000,
-    "SoLuongTonKho": 92,
-    "DanhMuc": "Văn phòng phẩm",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP095",
-    "TenSP": "Kẹo dẻo ChipChip (Lô 95)",
-    "DonViTinh": "Cái",
-    "GiaBan": 272000,
-    "SoLuongTonKho": 152,
-    "DanhMuc": "Bánh kẹo",
-    "IsDeleted": false
-  },
-  {
-    "MaSP": "SP096",
-    "TenSP": "Chocolate KitKat (Lô 96)",
-    "DonViTinh": "Cái",
-    "GiaBan": 412000,
+    "GiaBan": 373000,
     "SoLuongTonKho": 77,
     "DanhMuc": "Bánh kẹo",
     "IsDeleted": false
   },
   {
-    "MaSP": "SP097",
-    "TenSP": "Vở học sinh (Lô 97)",
+    "MaSP": "SP008",
+    "TenSP": "Thước kẻ Nội địa",
     "DonViTinh": "Cái",
-    "GiaBan": 54000,
-    "SoLuongTonKho": 140,
+    "GiaBan": 365000,
+    "SoLuongTonKho": 59,
     "DanhMuc": "Văn phòng phẩm",
     "IsDeleted": false
   },
   {
-    "MaSP": "SP098",
-    "TenSP": "Nước tăng lực Redbull (Lô 98)",
+    "MaSP": "SP009",
+    "TenSP": "Giấy A4 Nội địa",
     "DonViTinh": "Cái",
-    "GiaBan": 27000,
-    "SoLuongTonKho": 118,
+    "GiaBan": 231000,
+    "SoLuongTonKho": 36,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP010",
+    "TenSP": "Pepsi Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 203000,
+    "SoLuongTonKho": 14,
     "DanhMuc": "Đồ uống",
     "IsDeleted": false
   },
   {
-    "MaSP": "SP099",
-    "TenSP": "Nồi cơm điện (Lô 99)",
+    "MaSP": "SP011",
+    "TenSP": "Xúc xích Nhập khẩu",
     "DonViTinh": "Cái",
-    "GiaBan": 150000,
-    "SoLuongTonKho": 135,
+    "GiaBan": 307000,
+    "SoLuongTonKho": 36,
+    "DanhMuc": "Thực phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP012",
+    "TenSP": "Bia Tiger Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 51000,
+    "SoLuongTonKho": 99,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP013",
+    "TenSP": "Bút chì màu Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 80000,
+    "SoLuongTonKho": 128,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP014",
+    "TenSP": "Bát sứ Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 378000,
+    "SoLuongTonKho": 95,
     "DanhMuc": "Đồ gia dụng",
     "IsDeleted": false
   },
   {
-    "MaSP": "SP100",
-    "TenSP": "Vở học sinh (Lô 100)",
+    "MaSP": "SP015",
+    "TenSP": "Đũa gỗ Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 387000,
+    "SoLuongTonKho": 184,
+    "DanhMuc": "Đồ gia dụng",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP016",
+    "TenSP": "Nước tăng lực Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 242000,
+    "SoLuongTonKho": 87,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP017",
+    "TenSP": "Đồ hộp Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 15000,
+    "SoLuongTonKho": 11,
+    "DanhMuc": "Thực phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP018",
+    "TenSP": "Đồ hộp Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 477000,
+    "SoLuongTonKho": 148,
+    "DanhMuc": "Thực phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP019",
+    "TenSP": "Trà xanh Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 176000,
+    "SoLuongTonKho": 164,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP020",
+    "TenSP": "Kẹo dẻo Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 24000,
+    "SoLuongTonKho": 125,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP021",
+    "TenSP": "Cháo gói Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 369000,
+    "SoLuongTonKho": 63,
+    "DanhMuc": "Thực phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP022",
+    "TenSP": "Vở học sinh Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 118000,
+    "SoLuongTonKho": 62,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP023",
+    "TenSP": "Đũa gỗ Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 467000,
+    "SoLuongTonKho": 132,
+    "DanhMuc": "Đồ gia dụng",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP024",
+    "TenSP": "Bánh Gạo Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 110000,
+    "SoLuongTonKho": 47,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP025",
+    "TenSP": "Bút bi Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 301000,
+    "SoLuongTonKho": 197,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP026",
+    "TenSP": "Mì gói Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 344000,
+    "SoLuongTonKho": 23,
+    "DanhMuc": "Thực phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP027",
+    "TenSP": "Kẹo dẻo Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 241000,
+    "SoLuongTonKho": 113,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP028",
+    "TenSP": "Chảo chống dính Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 86000,
+    "SoLuongTonKho": 156,
+    "DanhMuc": "Đồ gia dụng",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP029",
+    "TenSP": "Mì gói Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 194000,
+    "SoLuongTonKho": 103,
+    "DanhMuc": "Thực phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP030",
+    "TenSP": "Pepsi Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 345000,
+    "SoLuongTonKho": 180,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP031",
+    "TenSP": "Chảo chống dính Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 300000,
+    "SoLuongTonKho": 115,
+    "DanhMuc": "Đồ gia dụng",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP032",
+    "TenSP": "Bút chì màu Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 389000,
+    "SoLuongTonKho": 11,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP033",
+    "TenSP": "Nồi cơm điện Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 207000,
+    "SoLuongTonKho": 122,
+    "DanhMuc": "Đồ gia dụng",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP034",
+    "TenSP": "Snack Oishi Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 161000,
+    "SoLuongTonKho": 174,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP035",
+    "TenSP": "Bia Tiger Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 448000,
+    "SoLuongTonKho": 150,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP036",
+    "TenSP": "Bánh Gạo Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 180000,
+    "SoLuongTonKho": 38,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP037",
+    "TenSP": "Thước kẻ Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 103000,
+    "SoLuongTonKho": 19,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP038",
+    "TenSP": "Trà xanh Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 190000,
+    "SoLuongTonKho": 19,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP039",
+    "TenSP": "Snack Oishi Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 346000,
+    "SoLuongTonKho": 46,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP040",
+    "TenSP": "Bánh quy Cosy Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 258000,
+    "SoLuongTonKho": 150,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP041",
+    "TenSP": "Vở học sinh Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 328000,
+    "SoLuongTonKho": 21,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP042",
+    "TenSP": "Bánh Gạo Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 96000,
+    "SoLuongTonKho": 82,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP043",
+    "TenSP": "Nồi cơm điện Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 205000,
+    "SoLuongTonKho": 25,
+    "DanhMuc": "Đồ gia dụng",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP044",
+    "TenSP": "Kẹo dẻo Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 278000,
+    "SoLuongTonKho": 128,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP045",
+    "TenSP": "Trà xanh Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 190000,
+    "SoLuongTonKho": 14,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP046",
+    "TenSP": "Bánh Gạo Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 418000,
+    "SoLuongTonKho": 85,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP047",
+    "TenSP": "Đũa gỗ Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 150000,
+    "SoLuongTonKho": 197,
+    "DanhMuc": "Đồ gia dụng",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP048",
+    "TenSP": "Bánh Gạo Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 477000,
+    "SoLuongTonKho": 175,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP049",
+    "TenSP": "Mì gói Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 228000,
+    "SoLuongTonKho": 170,
+    "DanhMuc": "Thực phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP050",
+    "TenSP": "Giấy A4 Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 271000,
+    "SoLuongTonKho": 24,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP051",
+    "TenSP": "Coca Cola Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 452000,
+    "SoLuongTonKho": 142,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP052",
+    "TenSP": "Trà xanh Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 273000,
+    "SoLuongTonKho": 22,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP053",
+    "TenSP": "Chảo chống dính Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 383000,
+    "SoLuongTonKho": 154,
+    "DanhMuc": "Đồ gia dụng",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP054",
+    "TenSP": "Bánh quy Cosy Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 375000,
+    "SoLuongTonKho": 35,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP055",
+    "TenSP": "Mì gói Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 30000,
+    "SoLuongTonKho": 95,
+    "DanhMuc": "Thực phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP056",
+    "TenSP": "Thước kẻ Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 28000,
+    "SoLuongTonKho": 60,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP057",
+    "TenSP": "Trà xanh Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 253000,
+    "SoLuongTonKho": 96,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP058",
+    "TenSP": "Kẹo dẻo Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 451000,
+    "SoLuongTonKho": 139,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP059",
+    "TenSP": "Pepsi Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 89000,
+    "SoLuongTonKho": 184,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP060",
+    "TenSP": "Snack Oishi Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 255000,
+    "SoLuongTonKho": 117,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP061",
+    "TenSP": "Giấy A4 Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 360000,
+    "SoLuongTonKho": 74,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP062",
+    "TenSP": "Bia Tiger Cao cấp",
     "DonViTinh": "Cái",
     "GiaBan": 421000,
-    "SoLuongTonKho": 145,
+    "SoLuongTonKho": 47,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP063",
+    "TenSP": "Vở học sinh Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 457000,
+    "SoLuongTonKho": 80,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP064",
+    "TenSP": "Ly thủy tinh Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 40000,
+    "SoLuongTonKho": 65,
+    "DanhMuc": "Đồ gia dụng",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP065",
+    "TenSP": "Vở học sinh Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 12000,
+    "SoLuongTonKho": 175,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP066",
+    "TenSP": "Snack Oishi Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 109000,
+    "SoLuongTonKho": 15,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP067",
+    "TenSP": "Vở học sinh Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 345000,
+    "SoLuongTonKho": 82,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP068",
+    "TenSP": "Nước tăng lực Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 254000,
+    "SoLuongTonKho": 65,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP069",
+    "TenSP": "Nước tăng lực Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 124000,
+    "SoLuongTonKho": 11,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP070",
+    "TenSP": "Mì gói Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 85000,
+    "SoLuongTonKho": 12,
+    "DanhMuc": "Thực phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP071",
+    "TenSP": "Bia Tiger Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 357000,
+    "SoLuongTonKho": 41,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP072",
+    "TenSP": "Vở học sinh Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 415000,
+    "SoLuongTonKho": 85,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP073",
+    "TenSP": "Bánh Gạo Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 328000,
+    "SoLuongTonKho": 73,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP074",
+    "TenSP": "Trà xanh Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 352000,
+    "SoLuongTonKho": 84,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP075",
+    "TenSP": "Ly thủy tinh Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 375000,
+    "SoLuongTonKho": 43,
+    "DanhMuc": "Đồ gia dụng",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP076",
+    "TenSP": "Bánh quy Cosy Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 363000,
+    "SoLuongTonKho": 197,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP077",
+    "TenSP": "Bút bi Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 165000,
+    "SoLuongTonKho": 84,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP078",
+    "TenSP": "Bút bi Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 241000,
+    "SoLuongTonKho": 72,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP079",
+    "TenSP": "Pepsi Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 229000,
+    "SoLuongTonKho": 194,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP080",
+    "TenSP": "Thước kẻ Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 243000,
+    "SoLuongTonKho": 133,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP081",
+    "TenSP": "Trà xanh Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 152000,
+    "SoLuongTonKho": 185,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP082",
+    "TenSP": "Bánh Gạo Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 467000,
+    "SoLuongTonKho": 95,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP083",
+    "TenSP": "Chảo chống dính Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 24000,
+    "SoLuongTonKho": 57,
+    "DanhMuc": "Đồ gia dụng",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP084",
+    "TenSP": "Nước tăng lực Khuyến mãi",
+    "DonViTinh": "Cái",
+    "GiaBan": 66000,
+    "SoLuongTonKho": 190,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP085",
+    "TenSP": "Miến dong Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 135000,
+    "SoLuongTonKho": 43,
+    "DanhMuc": "Thực phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP086",
+    "TenSP": "Miến dong Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 125000,
+    "SoLuongTonKho": 151,
+    "DanhMuc": "Thực phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP087",
+    "TenSP": "Xúc xích Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 114000,
+    "SoLuongTonKho": 147,
+    "DanhMuc": "Thực phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP088",
+    "TenSP": "Kẹo dẻo Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 95000,
+    "SoLuongTonKho": 113,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP089",
+    "TenSP": "Snack Oishi Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 68000,
+    "SoLuongTonKho": 97,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP090",
+    "TenSP": "Kẹo dẻo Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 438000,
+    "SoLuongTonKho": 73,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP091",
+    "TenSP": "Bánh Gạo Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 31000,
+    "SoLuongTonKho": 50,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP092",
+    "TenSP": "Ly thủy tinh Đặc biệt",
+    "DonViTinh": "Cái",
+    "GiaBan": 417000,
+    "SoLuongTonKho": 99,
+    "DanhMuc": "Đồ gia dụng",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP093",
+    "TenSP": "Thước kẻ Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 217000,
+    "SoLuongTonKho": 16,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP094",
+    "TenSP": "Nước tăng lực Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 346000,
+    "SoLuongTonKho": 136,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP095",
+    "TenSP": "Snack Oishi Loại 1",
+    "DonViTinh": "Cái",
+    "GiaBan": 27000,
+    "SoLuongTonKho": 180,
+    "DanhMuc": "Bánh kẹo",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP096",
+    "TenSP": "Xúc xích Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 486000,
+    "SoLuongTonKho": 151,
+    "DanhMuc": "Thực phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP097",
+    "TenSP": "Nồi cơm điện Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 238000,
+    "SoLuongTonKho": 30,
+    "DanhMuc": "Đồ gia dụng",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP098",
+    "TenSP": "Vở học sinh Nội địa",
+    "DonViTinh": "Cái",
+    "GiaBan": 66000,
+    "SoLuongTonKho": 196,
+    "DanhMuc": "Văn phòng phẩm",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP099",
+    "TenSP": "Trà xanh Cao cấp",
+    "DonViTinh": "Cái",
+    "GiaBan": 30000,
+    "SoLuongTonKho": 137,
+    "DanhMuc": "Đồ uống",
+    "IsDeleted": false
+  },
+  {
+    "MaSP": "SP100",
+    "TenSP": "Thước kẻ Nhập khẩu",
+    "DonViTinh": "Cái",
+    "GiaBan": 31000,
+    "SoLuongTonKho": 161,
     "DanhMuc": "Văn phòng phẩm",
     "IsDeleted": false
   }

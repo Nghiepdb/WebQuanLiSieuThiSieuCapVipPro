@@ -39,14 +39,53 @@ public static class QuanLySanPham
         return true;
     }
 
+    // Xóa mềm (Soft Delete) -> Đưa vào thùng rác
     public static bool XoaSanPham(string maSP)
     {
         if (!dsTheoMa.TryGetValue(maSP, out SanPham sp)) return false;
         
-        sp.IsDeleted = true; // Soft Delete
-        dsTheoMa[maSP] = sp; // Cập nhật lại vào Dictionary
+        sp.IsDeleted = true; 
+        dsTheoMa[maSP] = sp; 
         
         return true;
+    }
+
+    // [MỚI] Xóa vĩnh viễn (Hard Delete) -> Bay màu khỏi RAM
+    public static bool XoaVinhVien(string maSP)
+    {
+        if (!dsTheoMa.TryGetValue(maSP, out SanPham sp)) return false;
+
+        // 1. Xóa khỏi Dictionary chính
+        dsTheoMa.Remove(maSP);
+
+        // 2. Xóa khỏi Index theo Tên
+        string tenKey = sp.TenSP?.ToLowerInvariant() ?? "";
+        if (dsTheoTen.ContainsKey(tenKey))
+        {
+            dsTheoTen[tenKey].Remove(maSP);
+            if (dsTheoTen[tenKey].Count == 0) dsTheoTen.Remove(tenKey);
+        }
+
+        // 3. Xóa khỏi Index theo Danh mục
+        string dmKey = sp.DanhMuc ?? "Chưa phân loại";
+        if (dsTheoDanhMuc.ContainsKey(dmKey))
+        {
+            dsTheoDanhMuc[dmKey].Remove(maSP);
+            if (dsTheoDanhMuc[dmKey].Count == 0) dsTheoDanhMuc.Remove(dmKey);
+        }
+
+        return true;
+    }
+
+    // [MỚI] Dọn sạch thùng rác
+    public static void DonSachThungRac()
+    {
+        // Lấy danh sách ID cần xóa để tránh lỗi khi đang duyệt Dictionary
+        var listCanXoa = dsTheoMa.Values.Where(x => x.IsDeleted).Select(x => x.MaSP).ToList();
+        foreach (var ma in listCanXoa)
+        {
+            XoaVinhVien(ma);
+        }
     }
 
     public static bool KhoiPhucSanPham(string maSP)
@@ -144,7 +183,7 @@ public static class QuanLySanPham
                 "3. Sửa sản phẩm", 
                 "4. Xóa sản phẩm (Đưa vào thùng rác)", 
                 "5. Xem theo Danh mục", 
-                "6. Thùng rác (Khôi phục)",
+                "6. Thùng rác (Khôi phục & Dọn dẹp)", // Cập nhật tiêu đề
                 "7. Xuất Báo cáo Excel (.csv)",
                 "0. Quay lại" 
             };
@@ -408,24 +447,86 @@ public static class QuanLySanPham
         }
     }
 
+    // --- [NÂNG CẤP] GIAO DIỆN THÙNG RÁC (CÓ DỌN DẸP) ---
     private static void GiaoDienThungRac()
     {
-        var listDaXoa = dsTheoMa.Values.Where(x => x.IsDeleted).ToList();
-        
-        if (listDaXoa.Count == 0) 
+        while (true)
         {
-            ConsoleUI.HienThiThongBao("Thùng rác trống.", ConsoleColor.Green);
-            return;
-        }
-
-        SanPham? spChon = ConsoleUI.ChonMotSanPhamVoiBoLocRealTime(listDaXoa, "THÙNG RÁC - CHỌN ĐỂ KHÔI PHỤC");
-
-        if (spChon.HasValue)
-        {
-            if (ConsoleUI.XacNhan($"Khôi phục sản phẩm {spChon.Value.TenSP}?"))
+            Console.Clear(); // Fix lỗi đè chữ
+            int soLuongRac = dsTheoMa.Values.Count(x => x.IsDeleted);
+            
+            var menu = new List<string>
             {
-                KhoiPhucSanPham(spChon.Value.MaSP);
-                ConsoleUI.HienThiThongBao("Đã khôi phục thành công!", ConsoleColor.Green);
+                $"1. Xem & Khôi phục/Xóa lẻ (Đang có {soLuongRac} món)",
+                "2. Dọn sạch thùng rác (Xóa vĩnh viễn tất cả)",
+                "0. Quay lại"
+            };
+
+            int chon = ConsoleUI.HienThiMenuChon("QUẢN LÝ THÙNG RÁC", menu);
+            
+            if (chon == 0)
+            {
+                // Xem & Xử lý từng món
+                var listDaXoa = dsTheoMa.Values.Where(x => x.IsDeleted).ToList();
+                if (listDaXoa.Count == 0) 
+                {
+                    ConsoleUI.HienThiThongBao("Thùng rác trống.", ConsoleColor.Green);
+                    continue;
+                }
+
+                SanPham? spChon = ConsoleUI.ChonMotSanPhamVoiBoLocRealTime(listDaXoa, "THÙNG RÁC - CHỌN ĐỂ XỬ LÝ");
+
+                if (spChon.HasValue)
+                {
+                    Console.Clear();
+                    ConsoleUI.VeTieuDe("TÙY CHỌN XỬ LÝ");
+                    HienThiChiTiet(spChon.Value);
+                    ConsoleUI.KeVienNgang();
+                    Console.WriteLine("1. Khôi phục (Đưa lại kho hàng)");
+                    Console.WriteLine("2. Xóa vĩnh viễn (Không thể khôi phục)");
+                    Console.WriteLine("0. Hủy");
+                    
+                    int? opt = ConsoleUI.DocSoNguyen("Lựa chọn: ");
+                    if (opt == 1)
+                    {
+                        KhoiPhucSanPham(spChon.Value.MaSP);
+                        ConsoleUI.HienThiThongBao("Đã khôi phục!", ConsoleColor.Green);
+                    }
+                    else if (opt == 2)
+                    {
+                        if (ConsoleUI.XacNhan("CẢNH BÁO: Xóa vĩnh viễn?"))
+                        {
+                            XoaVinhVien(spChon.Value.MaSP);
+                            ConsoleUI.HienThiThongBao("Đã xóa vĩnh viễn!", ConsoleColor.Green);
+                        }
+                    }
+                }
+            }
+            else if (chon == 1)
+            {
+                // Dọn sạch
+                if (soLuongRac == 0)
+                {
+                    ConsoleUI.HienThiThongBao("Thùng rác đã trống sẵn.", ConsoleColor.Green);
+                    continue;
+                }
+
+                Console.Clear();
+                ConsoleUI.VeTieuDe("DỌN DẸP THÙNG RÁC");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"CẢNH BÁO: Bạn sắp xóa vĩnh viễn {soLuongRac} sản phẩm.");
+                Console.WriteLine("Hành động này KHÔNG THỂ hoàn tác!");
+                Console.ResetColor();
+
+                if (ConsoleUI.XacNhan("Xác nhận dọn sạch thùng rác?"))
+                {
+                    DonSachThungRac();
+                    ConsoleUI.HienThiThongBao("Thùng rác đã được dọn sạch!", ConsoleColor.Green);
+                }
+            }
+            else if (chon == 2 || chon == -1)
+            {
+                return; // Thoát
             }
         }
     }

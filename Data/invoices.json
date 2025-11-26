@@ -48,5 +48,30 @@
         "ThanhTien": 125000
       }
     ]
+  },
+  {
+    "MaHoaDon": "HD20251126110436",
+    "NguoiTao": "thungan",
+    "SdtKhachHang": null,
+    "NgayLap": "2025-11-26T11:04:36.8384411+07:00",
+    "TongTienHang": 710000,
+    "GiamGia": 0,
+    "ThanhTien": 710000,
+    "ChiTiet": [
+      {
+        "MaSP": "SP001",
+        "TenSP": "Sữa tươi Vinamilk 1L",
+        "SoLuong": 6,
+        "DonGia": 35000,
+        "ThanhTien": 210000
+      },
+      {
+        "MaSP": "SP004",
+        "TenSP": "Thịt ba rọi bò Mỹ",
+        "SoLuong": 2,
+        "DonGia": 250000,
+        "ThanhTien": 500000
+      }
+    ]
   }
 ]
