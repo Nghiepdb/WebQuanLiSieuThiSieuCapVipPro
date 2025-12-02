@@ -22,5 +22,11 @@
     "Password": "null",
     "HoTen": "ez",
     "Role": 0
+  },
+  {
+    "Username": "bien",
+    "Password": "123",
+    "HoTen": "Biển",
+    "Role": 1
   }
 ]

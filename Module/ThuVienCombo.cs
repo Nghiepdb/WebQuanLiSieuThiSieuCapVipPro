@@ -31,6 +31,7 @@ public static class ThuVienCombo
             { 
                 "1. Xem mẫu Combo ngày lễ có sẵn (Tự động gợi ý)", 
                 "2. Tạo Combo thủ công (Tự chọn sản phẩm)",
+                "3. Tạo Combo Giải Cứu (Hàng cận date - FEFO)", // [MỚI]
                 "0. Quay lại" 
             };
 
@@ -40,10 +41,60 @@ public static class ThuVienCombo
             {
                 case 0: HienThiMenuNgayLe(); break;
                 case 1: ChayCheDoThuCong(); break;
-                case 2: dangChay = false; break;
+                case 2: XuLyComboHangCanDate(); break; // [MỚI]
+                case 3: dangChay = false; break;
                 case -1: dangChay = false; break;
             }
         }
+    }
+
+    // --- CHỨC NĂNG MỚI: COMBO GIẢI CỨU HÀNG CẬN DATE ---
+    private static void XuLyComboHangCanDate()
+    {
+        Console.Clear();
+        ConsoleUI.VeTieuDe("COMBO GIẢI CỨU (HÀNG CẬN DATE)");
+
+        // Cho phép nhập số ngày cảnh báo, mặc định là 30
+        int songay = ConsoleUI.DocSoNguyen("Nhập giới hạn số ngày hết hạn (Mặc định 30 ngày): ") ?? 30;
+        DateTime homNay = DateTime.Now;
+        DateTime nguongCanhBao = homNay.AddDays(songay);
+
+        Console.WriteLine($"\nĐang quét kho tìm hàng hết hạn trước: {nguongCanhBao:dd/MM/yyyy}...");
+
+        // 1. Lọc các Mã SP từ Lô Hàng có HSD <= ngưỡng và còn Tồn > 0
+        // GroupBy để loại bỏ mã trùng lặp nếu 1 sản phẩm có nhiều lô cận date
+        var dsMaSPCanDate = Database.LoHangs
+            .Where(l => l.SoLuong > 0 && l.HanSuDung <= nguongCanhBao && l.HanSuDung >= homNay)
+            .Select(l => l.MaSP)
+            .Distinct()
+            .ToList();
+
+        if (dsMaSPCanDate.Count == 0)
+        {
+            ConsoleUI.HienThiThongBao($"Tuyệt vời! Không có lô hàng nào hết hạn trong {songay} ngày tới.", ConsoleColor.Green);
+            return;
+        }
+
+        // 2. Lấy thông tin chi tiết Sản Phẩm từ Dictionary
+        var dsNguyenLieu = new List<SanPham>();
+        foreach (var ma in dsMaSPCanDate)
+        {
+            if (QuanLySanPham.dsTheoMa.TryGetValue(ma, out SanPham sp) && !sp.IsDeleted)
+            {
+                dsNguyenLieu.Add(sp);
+            }
+        }
+
+        if (dsNguyenLieu.Count < 2)
+        {
+            ConsoleUI.HienThiThongBao("Số lượng hàng cận date quá ít để tạo Combo.", ConsoleColor.Yellow);
+            return;
+        }
+
+        Console.WriteLine($"Tìm thấy {dsNguyenLieu.Count} mặt hàng cần đẩy gấp!");
+        
+        // 3. Chạy thuật toán gợi ý combo
+        ChayThuatToanVaHienThi(dsNguyenLieu, $"COMBO GIẢI CỨU (DATE < {songay} NGÀY)");
     }
 
     // --- CHẾ ĐỘ 1: MẪU CÓ SẴN (PRESET) ---
@@ -71,20 +122,16 @@ public static class ThuVienCombo
         Console.Clear();
         ConsoleUI.VeTieuDe($"GỢI Ý: {leHoi.TenLeHoi}");
 
-        // [NÂNG CẤP LOGIC] 
-        // Thay vì lấy 20 món đắt nhất (cố định), ta lấy NGẪU NHIÊN 20 món từ kho
-        // Điều này giúp mỗi lần chạy sẽ ra các gợi ý combo khác nhau.
-        
         Random rng = new Random();
         var dsNguyenLieu = QuanLySanPham.dsTheoMa.Values
-            .Where(x => !x.IsDeleted) // Vẫn lọc hàng đã xóa
-            .OrderBy(x => rng.Next()) // [QUAN TRỌNG] Xáo trộn ngẫu nhiên danh sách
-            .Take(20)                 // Lấy 20 món bất kỳ sau khi xáo
+            .Where(x => !x.IsDeleted)
+            .OrderBy(x => rng.Next()) // Random danh sách
+            .Take(20)                 // Lấy 20 món bất kỳ
             .ToList();
         
         if (dsNguyenLieu.Count < 2)
         {
-            ConsoleUI.HienThiThongBao("Kho hàng không đủ sản phẩm (hoặc đã bị xóa hết).", ConsoleColor.Red);
+            ConsoleUI.HienThiThongBao("Kho hàng không đủ sản phẩm.", ConsoleColor.Red);
             return;
         }
 
@@ -108,7 +155,6 @@ public static class ThuVienCombo
 
         if (dsDaChon == null || dsDaChon.Count == 0) return;
 
-        // --- UI ---
         Console.Clear(); 
         ConsoleUI.VeTieuDe("CẤU HÌNH COMBO");
         Console.WriteLine($"Đã chọn {dsDaChon.Count} sản phẩm làm nguyên liệu.");
@@ -136,7 +182,7 @@ public static class ThuVienCombo
             return;
         }
 
-        // Sắp xếp theo tổng giá trị giảm dần (để gợi ý combo giá trị cao nhất trong tập ngẫu nhiên đó)
+        // Sắp xếp theo tổng giá trị giảm dần
         var topCombos = tatCaCombos
             .Select(cb => new { DanhSach = cb, TongGia = cb.Sum(sp => sp.GiaBan) })
             .OrderByDescending(x => x.TongGia)
@@ -182,7 +228,7 @@ public static class ThuVienCombo
         }
     }
 
-    // --- LOGIC BACKTRACKING (GIỮ NGUYÊN) ---
+    // --- LOGIC BACKTRACKING ---
     public static List<List<SanPham>> LietKeCombos(List<SanPham> list, int m)
     {
         var res = new List<List<SanPham>>();

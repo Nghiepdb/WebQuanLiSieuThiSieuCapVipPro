@@ -6,29 +6,27 @@ using System.Linq;
 
 public static class ConsoleUI
 {
-    // --- THEME MÀU SẮC (CHUẨN HÓA) ---
+    // --- THEME MÀU SẮC ---
     public const ConsoleColor MauNenChung = ConsoleColor.Black;
-    public const ConsoleColor MauVien = ConsoleColor.Cyan;       // Khung viền
-    public const ConsoleColor MauTieuDe = ConsoleColor.Yellow;   // Tiêu đề lớn
-    public const ConsoleColor MauChinh = ConsoleColor.White;     // Chữ thường
-    public const ConsoleColor MauPhu = ConsoleColor.Gray;        // Chữ phụ / Hint
-    public const ConsoleColor MauHighlight = ConsoleColor.Black; // Đang chọn
+    public const ConsoleColor MauVien = ConsoleColor.Cyan;
+    public const ConsoleColor MauTieuDe = ConsoleColor.Yellow;
+    public const ConsoleColor MauChinh = ConsoleColor.White;
+    public const ConsoleColor MauPhu = ConsoleColor.Gray;
+    public const ConsoleColor MauHighlight = ConsoleColor.Black;
     public const ConsoleColor MauNenHighlight = ConsoleColor.DarkGray;
     public const ConsoleColor MauLoi = ConsoleColor.Red;
     public const ConsoleColor MauThanhCong = ConsoleColor.Green;
 
-    // --- HÀM VẼ UI ---
     public static void VeTieuDe(string tieuDe)
     {
         Console.Clear();
-        int width = Math.Min(Console.WindowWidth - 2, 90); 
+        int width = Math.Min(Console.WindowWidth - 2, 95); 
         string vienNgang = new string('═', width);
         
         DatMau(MauVien);
         Console.WriteLine($"╔{vienNgang}╗");
         Console.Write("║");
         
-        // Căn giữa tiêu đề
         string titleUpper = tieuDe.ToUpper();
         int paddingLeft = (width - titleUpper.Length) / 2;
         int paddingRight = width - titleUpper.Length - paddingLeft;
@@ -43,14 +41,14 @@ public static class ConsoleUI
         Console.WriteLine();
     }
 
-    public static void KeVienNgang(int doDai = 90)
+    public static void KeVienNgang(int doDai = 95)
     {
         DatMau(ConsoleColor.DarkGray);
         Console.WriteLine(new string('─', doDai));
         Console.ResetColor();
     }
 
-    // --- TÌM KIẾM REAL-TIME SẢN PHẨM ---
+    // --- TÌM KIẾM SẢN PHẨM (REAL-TIME) ---
     public static SanPham? ChonMotSanPhamVoiBoLocRealTime(List<SanPham> khoHang, string tieuDe = "TÌM KIẾM SẢN PHẨM")
     {
         string tuKhoa = "";
@@ -85,9 +83,9 @@ public static class ConsoleUI
                 Console.WriteLine($" (Kết quả: {danhSachLoc.Count})");
                 
                 DatMau(ConsoleColor.DarkCyan);
-                Console.WriteLine($"{" Mã",-8} | {" Tên Sản Phẩm",-25} | {" Danh Mục",-20} | {" Giá (VNĐ)",15} | {" Tồn",5}");
+                Console.WriteLine($"{" Mã",-7} | {" Tên Sản Phẩm",-22} | {" Danh Mục",-15} | {" Giá",10} | {" Tồn",5} | {" HSD",-12}");
                 Console.ResetColor();
-                KeVienNgang(90);
+                KeVienNgang(95);
 
                 int trangStart = Math.Max(0, indexHienTai - soDongHienThi / 2);
                 if (trangStart + soDongHienThi > danhSachLoc.Count) 
@@ -111,15 +109,23 @@ public static class ConsoleUI
                         if (isHighlight) DatMau(MauHighlight, MauNenHighlight);
                         else DatMau(MauPhu);
 
-                        string ten = (sp.TenSP ?? "").Length > 23 ? sp.TenSP.Substring(0, 20) + "..." : sp.TenSP;
-                        string dm = (sp.DanhMuc ?? "").Length > 18 ? sp.DanhMuc.Substring(0, 15) + "..." : sp.DanhMuc;
+                        // [FIX NULL & LENGTH]
+                        string tenRaw = sp.TenSP ?? "";
+                        string ten = tenRaw.Length > 20 ? tenRaw.Substring(0, 17) + "..." : tenRaw;
+                        
+                        string dmRaw = sp.DanhMuc ?? "";
+                        string dm = dmRaw.Length > 13 ? dmRaw.Substring(0, 10) + "..." : dmRaw;
+                        
+                        int ngayConLai = (sp.HanSuDung - DateTime.Now).Days;
+                        string strHSD = sp.HanSuDung.ToString("dd/MM/yyyy");
+                        if (ngayConLai < 30) strHSD += " (!)";
 
-                        string line = $" {sp.MaSP,-8} | {ten,-25} | {dm,-20} | {sp.GiaBan,15:N0} | {sp.SoLuongTonKho,5}";
-                        Console.WriteLine(line.PadRight(90)); 
+                        string line = $" {sp.MaSP,-7} | {ten,-22} | {dm,-15} | {sp.GiaBan,10:N0} | {sp.SoLuongTonKho,5} | {strHSD,-12}";
+                        Console.WriteLine(line.PadRight(95)); 
                         Console.ResetColor();
                     }
                 }
-                KeVienNgang(90);
+                KeVienNgang(95);
                 canVeLai = false;
             }
 
@@ -163,24 +169,19 @@ public static class ConsoleUI
                 if (danhSachLoc.Count > 0)
                 {
                     var spReview = danhSachLoc[indexHienTai];
-                    int oldLeft = Console.CursorLeft;
-                    int oldTop = Console.CursorTop;
-
-                    int popupTop = Math.Min(Console.WindowHeight , 20);
+                    int popupTop = Math.Min(Console.WindowHeight - 8, 18);
                     Console.SetCursorPosition(5, popupTop);
                     DatMau(ConsoleColor.White, ConsoleColor.DarkBlue);
-                    string temp = spReview.GiaBan.ToString("N0") + "  VNĐ";
                     Console.WriteLine("╔════════════════════════ XEM NHANH (PREVIEW) ══════════════════════╗");
                     Console.SetCursorPosition(5, popupTop + 1);
-                    Console.WriteLine($"║ Tên đầy đủ: {spReview.TenSP.PadRight(54)}║");
+                    Console.WriteLine($"║ Tên đầy đủ: {(spReview.TenSP ?? "").PadRight(54)}║");
                     Console.SetCursorPosition(5, popupTop + 2);
-                    Console.WriteLine($"║ Danh mục  : {spReview.DanhMuc.PadRight(54)}║");
+                    Console.WriteLine($"║ Hạn sử dụng: {spReview.HanSuDung:dd/MM/yyyy} (Còn {(spReview.HanSuDung - DateTime.Now).Days} ngày)".PadRight(63) + "║");
                     Console.SetCursorPosition(5, popupTop + 3);
-                    Console.WriteLine($"║ Giá bán   : {temp.PadRight(54)}║");
+                    Console.WriteLine($"║ Giá bán   : {spReview.GiaBan:N0} VNĐ".PadRight(63) + "║");
                     Console.SetCursorPosition(5, popupTop + 4);
                     Console.WriteLine("╚═══════════════════════════════════════════════════════════════════╝");
                     Console.ResetColor();
-                    
                     Console.ReadKey(true);
                     canVeLai = true;
                 }
@@ -196,7 +197,7 @@ public static class ConsoleUI
         }
     }
 
-    // --- [MỚI] TÌM KIẾM REAL-TIME NGƯỜI DÙNG ---
+    // --- [FIX] TÌM KIẾM NGƯỜI DÙNG (ĐÃ THÊM VÀO) ---
     public static NguoiDung? ChonMotNguoiDungVoiBoLocRealTime(List<NguoiDung> dsUser, string tieuDe = "TÌM KIẾM NGƯỜI DÙNG")
     {
         string tuKhoa = "";
@@ -327,8 +328,7 @@ public static class ConsoleUI
                 string.IsNullOrEmpty(tuKhoa) ||
                 (sp.MaSP?.ToLower().Contains(tuKhoa.ToLower()) ?? false) ||
                 (sp.TenSP?.ToLower().Contains(tuKhoa.ToLower()) ?? false) ||
-                sp.GiaBan.ToString().Contains(tuKhoa) ||
-                (sp.DanhMuc?.ToLower().Contains(tuKhoa.ToLower()) ?? false)
+                sp.GiaBan.ToString().Contains(tuKhoa)
             ).ToList();
 
             if (indexHienTai >= danhSachLoc.Count) indexHienTai = Math.Max(0, danhSachLoc.Count - 1);
@@ -348,9 +348,9 @@ public static class ConsoleUI
                 Console.ResetColor();
 
                 DatMau(ConsoleColor.DarkCyan);
-                Console.WriteLine($"{"   Mã",-11} | {" Tên Sản Phẩm",-25} | {" Danh Mục",-20} | {" Giá",15}");
+                Console.WriteLine($"{"   Mã",-11} | {" Tên Sản Phẩm",-22} | {" Danh Mục",-15} | {" Giá",10} | {" HSD",-12}");
                 Console.ResetColor();
-                KeVienNgang(90);
+                KeVienNgang(95);
 
                 int trangStart = Math.Max(0, indexHienTai - soDongHienThi / 2);
                  if (trangStart + soDongHienThi > danhSachLoc.Count) 
@@ -370,15 +370,20 @@ public static class ConsoleUI
                         else DatMau(MauPhu);
 
                         string checkMark = isSelected ? "[x]" : "[ ]";
-                        string ten = (sp.TenSP ?? "").Length > 23 ? sp.TenSP.Substring(0, 20) + ".." : sp.TenSP;
-                        string dm = (sp.DanhMuc ?? "").Length > 18 ? sp.DanhMuc.Substring(0, 15) + ".." : sp.DanhMuc;
+                        
+                        // [FIX NULL]
+                        string tenRaw = sp.TenSP ?? "";
+                        string ten = tenRaw.Length > 20 ? tenRaw.Substring(0, 17) + ".." : tenRaw;
+                        string dmRaw = sp.DanhMuc ?? "";
+                        string dm = dmRaw.Length > 13 ? dmRaw.Substring(0, 10) + ".." : dmRaw;
+                        string strHSD = sp.HanSuDung.ToString("dd/MM/yyyy");
 
-                        string line = $"{checkMark} {sp.MaSP,-8} | {ten,-25} | {dm,-20} | {sp.GiaBan,15:N0}";
-                        Console.WriteLine(line.PadRight(90));
+                        string line = $"{checkMark} {sp.MaSP,-7} | {ten,-22} | {dm,-15} | {sp.GiaBan,10:N0} | {strHSD,-12}";
+                        Console.WriteLine(line.PadRight(95));
                         Console.ResetColor();
                     }
                 }
-                KeVienNgang(90);
+                KeVienNgang(95);
                 canVeLai = false;
             }
 
@@ -423,7 +428,7 @@ public static class ConsoleUI
                 if (i == mucChonHienTai)
                 {
                     DatMau(MauHighlight, MauNenHighlight);
-                    Console.WriteLine("  ► " + cacLuaChon[i].PadRight(Math.Min(Console.WindowWidth - 6, 85)));
+                    Console.WriteLine("  ► " + cacLuaChon[i].PadRight(Math.Min(Console.WindowWidth - 6, 90)));
                     Console.ResetColor();
                 }
                 else
@@ -432,7 +437,7 @@ public static class ConsoleUI
                 }
             }
             Console.WriteLine();
-            KeVienNgang(Math.Min(Console.WindowWidth - 2, 90));
+            KeVienNgang(Math.Min(Console.WindowWidth - 2, 95));
             DatMau(MauPhu);
             Console.WriteLine(" [▲/▼] Di chuyển | [Enter] Chọn | [Esc] Thoát");
             Console.ResetColor();

@@ -12,7 +12,8 @@ public static class KiemThu
         {
             "1. So sánh hiệu năng (Dictionary vs List)",
             "2. Kiểm thử Combo (Backtracking)",
-            "3. Tạo 100 dữ liệu mẫu thực tế (Có tạo Lô hàng)",
+            "3. Tạo 100 Sản phẩm mẫu (Có tạo Lô hàng)",
+            "4. Tạo 50 Khách hàng thân thiết (Mới)",
             "0. Quay lại"
         };
 
@@ -24,24 +25,66 @@ public static class KiemThu
                 case 0: KiemThuHieuNang_CTDL_SoSanh(); break;
                 case 1: KiemThuHieuNang_Combo(); break;
                 case 2: TaoVaLuuDuLieuMau(); break;
-                case 3: dangChay = false; break;
+                case 3: Tao50KhachHangThanThiet(); break;
+                case 4: dangChay = false; break;
                 case -1: dangChay = false; break;
             }
         }
+    }
+
+    // [MỚI] TẠO KHÁCH HÀNG THÂN THIẾT
+    private static void Tao50KhachHangThanThiet()
+    {
+        Console.Clear();
+        ConsoleUI.VeTieuDe("TẠO KHÁCH HÀNG MẪU");
+        if (!ConsoleUI.XacNhan("Hành động này sẽ thêm 50 khách hàng VIP/SVIP. Tiếp tục?")) return;
+
+        string[] ho = { "Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Huỳnh", "Phan", "Vũ", "Võ", "Đặng" };
+        string[] tenDem = { "Văn", "Thị", "Minh", "Thanh", "Gia", "Bảo", "Kim", "Mỹ", "Ngọc", "Tuấn" };
+        string[] ten = { "An", "Bình", "Châu", "Dũng", "Giang", "Hà", "Khánh", "Lan", "Minh", "Nam", "Nga", "Phúc" };
+
+        Random r = new Random();
+        int count = 0;
+
+        for (int i = 0; i < 50; i++)
+        {
+            string hoTen = $"{ho[r.Next(ho.Length)]} {tenDem[r.Next(tenDem.Length)]} {ten[r.Next(ten.Length)]}";
+            string sdt = "09" + r.Next(10000000, 99999999).ToString();
+            
+            // Random chi tiêu từ 5 triệu đến 100 triệu
+            decimal chiTieu = r.Next(5, 100) * 1000000; 
+
+            var kh = new KhachHang
+            {
+                TenKhach = hoTen,
+                SoDienThoai = sdt,
+                TongChiTieu = chiTieu
+            };
+            kh.CapNhatHang(); // Tự động lên hạng VIP/SVIP
+            
+            // Kiểm tra trùng SĐT
+            if (!Database.KhachHangs.Any(k => k.SoDienThoai == sdt))
+            {
+                Database.KhachHangs.Add(kh);
+                count++;
+            }
+        }
+
+        Database.LuuDuLieu();
+        ConsoleUI.HienThiThongBao($"Đã thêm thành công {count} khách hàng VIP/SVIP!", ConsoleUI.MauThanhCong);
     }
 
     private static void TaoVaLuuDuLieuMau()
     {
         Console.Clear();
         ConsoleUI.VeTieuDe("TẠO DATA MẪU");
-        if (!ConsoleUI.XacNhan("CẢNH BÁO: Dữ liệu cũ (Sản phẩm & Lô hàng) sẽ bị XÓA. Tiếp tục?")) return;
+        if (!ConsoleUI.XacNhan("CẢNH BÁO: Dữ liệu cũ sẽ bị XÓA. Tiếp tục?")) return;
 
-        // Xóa sạch dữ liệu cũ
         QuanLySanPham.dsTheoMa.Clear();
         QuanLySanPham.dsTheoTen.Clear();
         QuanLySanPham.dsTheoDanhMuc.Clear();
         QuanLySanPham_List.XoaTatCa();
-        Database.LoHangs.Clear(); // Xóa cả lô hàng để đồng bộ
+        Database.LoHangs.Clear();
 
         var duLieuMau = new List<SanPham>();
         var dataMau = new Dictionary<string, List<string>>()
@@ -66,24 +109,27 @@ public static class KiemThu
             string finalName = $"{name} {suffix}"; 
             string maSP = $"SP{i:D3}";
             int soLuong = r.Next(10, 200);
+            
+            // Tạo HSD ngẫu nhiên từ -1 tháng (hết hạn) đến +12 tháng
+            DateTime hsd = DateTime.Now.AddDays(r.Next(-30, 365));
 
-            // 1. Tạo Sản Phẩm
-            duLieuMau.Add(new SanPham(maSP, finalName, "Cái", r.Next(10, 500) * 1000, soLuong, cat));
+            // Tạo Sản Phẩm kèm HSD
+            duLieuMau.Add(new SanPham(maSP, finalName, "Cái", r.Next(10, 500) * 1000, soLuong, cat, hsd));
 
-            // 2. [FIX] Tạo Lô Hàng tương ứng (Để bán được)
+            // Tạo Lô Hàng khớp với HSD của sản phẩm
             Database.LoHangs.Add(new LoHang {
                 MaLo = $"L{i:D3}_{DateTime.Now.Ticks % 10000}",
                 MaSP = maSP,
                 SoLuong = soLuong,
                 NgayNhap = DateTime.Now.AddDays(-r.Next(1, 30)),
-                HanSuDung = DateTime.Now.AddMonths(r.Next(1, 12)) // Hạn sử dụng ngẫu nhiên
+                HanSuDung = hsd
             });
         }
 
         foreach (var sp in duLieuMau) QuanLySanPham.ThemSanPham(sp);
         
-        Database.LuuDuLieu(); // Lưu cả Sản phẩm và Lô hàng
-        ConsoleUI.HienThiThongBao($"Đã tạo 100 Sản phẩm & 100 Lô hàng tương ứng.", ConsoleUI.MauThanhCong);
+        Database.LuuDuLieu();
+        ConsoleUI.HienThiThongBao($"Đã tạo 100 Sản phẩm & 100 Lô hàng.", ConsoleUI.MauThanhCong);
     }
     
      private static void KiemThuHieuNang_CTDL_SoSanh()
@@ -102,7 +148,7 @@ public static class KiemThu
         List<SanPham> duLieuTest = new List<SanPham>();
         for (int i = 0; i < N; i++) 
         {
-            duLieuTest.Add(new SanPham($"TEST{i}", $"Sản phẩm Test {i}", "Cái", 100, 10, "Test"));
+            duLieuTest.Add(new SanPham($"TEST{i}", $"Sản phẩm Test {i}", "Cái", 100, 10, "Test", DateTime.Now.AddYears(1)));
         }
         
         string maGiua = $"TEST{N / 2}";
@@ -202,7 +248,7 @@ public static class KiemThu
         if (m == null) return;
 
         List<SanPham> ds = new List<SanPham>();
-        for (int i = 0; i < n.Value; i++) ds.Add(new SanPham($"T{i}", $"SP {i}", "Cái", 1, 1));
+        for (int i = 0; i < n.Value; i++) ds.Add(new SanPham($"T{i}", $"SP {i}", "Cái", 1, 1, "Test", DateTime.Now.AddDays(10)));
 
         Console.WriteLine("Đang tính toán...");
         Stopwatch sw = Stopwatch.StartNew();

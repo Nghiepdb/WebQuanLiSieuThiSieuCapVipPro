@@ -120,7 +120,7 @@ public class ChiTietHoaDon
     public decimal ThanhTien => SoLuong * DonGia;
 }
 
-// --- [MỚI] PHIẾU TRẢ HÀNG ---
+// --- PHIẾU TRẢ HÀNG ---
 public class PhieuTraHang
 {
     public string MaPhieu { get; set; } = "";

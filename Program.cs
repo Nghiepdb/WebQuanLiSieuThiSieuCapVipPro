@@ -101,7 +101,8 @@ public static class Program
             "5. Vào Quầy Thu Ngân (POS)",
             "6. Thư viện Combo (Backtracking)",
             "7. Kiểm thử Hiệu năng & Data",
-            "8. Đổi mật khẩu cá nhân", // [MỚI]
+            "8. Quản lý Khách hàng (Xem danh sách VIP)", // [MỚI]
+            "9. Đổi mật khẩu cá nhân", 
             "0. Đăng xuất"
         };
 
@@ -117,14 +118,15 @@ public static class Program
                 case 4: QuanLyBanHang.HienThiMenu(); break;
                 case 5: ThuVienCombo.HienThiMenu(); break;
                 case 6: KiemThu.HienThiMenu(); break;
-                case 7: DoiMatKhau(); break; // [MỚI]
-                case 8: dangChay = false; CurrentUser = null; break;
+                case 7: QuanLyKhachHang.XemDanhSachKhachHang(); break; // [MỚI]
+                case 8: DoiMatKhau(); break; 
+                case 9: dangChay = false; CurrentUser = null; break;
                 case -1: dangChay = false; CurrentUser = null; break;
             }
         }
     }
 
-    // --- [MỚI] CHỨC NĂNG ĐỔI MẬT KHẨU (DÙNG CHUNG) ---
+    // --- CHỨC NĂNG ĐỔI MẬT KHẨU ---
     public static void DoiMatKhau()
     {
         Console.Clear();
@@ -164,7 +166,6 @@ public static class Program
         // 3. Cập nhật và Lưu
         CurrentUser.Password = passMoi;
         
-        // Cập nhật vào danh sách gốc trong Database (do CurrentUser là tham chiếu nhưng tìm lại cho chắc chắn)
         var userInDb = Database.NguoiDungs.FirstOrDefault(u => u.Username == CurrentUser.Username);
         if (userInDb != null) userInDb.Password = passMoi;
         
